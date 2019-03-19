@@ -107,7 +107,12 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
-        elseif (0 === strpos($pathinfo, '/blog')) {
+        // admin_homepage
+        if ('/Admin/Home' === $pathinfo) {
+            return array (  '_controller' => 'AdminBundle\\Controller\\DefaultController::indexAction',  '_route' => 'admin_homepage',);
+        }
+
+        if (0 === strpos($pathinfo, '/blog')) {
             // blog_homepage
             if ('/blog' === $trimmedPathinfo) {
                 $ret = array (  '_controller' => 'BlogBundle\\Controller\\DefaultController::indexAction',  '_route' => 'blog_homepage',);

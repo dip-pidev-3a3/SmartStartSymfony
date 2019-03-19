@@ -21,6 +21,7 @@
       <parameter key="FOSUserBundle">FOS\UserBundle\FOSUserBundle</parameter>
       <parameter key="BlogBundle">BlogBundle\BlogBundle</parameter>
       <parameter key="TilowebPaginationBundle">Tiloweb\PaginationBundle\TilowebPaginationBundle</parameter>
+      <parameter key="AdminBundle">AdminBundle\AdminBundle</parameter>
       <parameter key="DebugBundle">Symfony\Bundle\DebugBundle\DebugBundle</parameter>
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</parameter>
@@ -87,6 +88,11 @@
         <parameter key="parent">null</parameter>
         <parameter key="path">C:\wamp64\www\SmartStartSymfony-master\vendor\tiloweb\pagination-bundle\Tiloweb\PaginationBundle</parameter>
         <parameter key="namespace">Tiloweb\PaginationBundle</parameter>
+      </parameter>
+      <parameter key="AdminBundle" type="collection">
+        <parameter key="parent">null</parameter>
+        <parameter key="path">C:\wamp64\www\SmartStartSymfony-master\src\AdminBundle</parameter>
+        <parameter key="namespace">AdminBundle</parameter>
       </parameter>
       <parameter key="DebugBundle" type="collection">
         <parameter key="parent">null</parameter>
@@ -657,6 +663,7 @@
       <argument type="tagged" tag="kernel.cache_warmer"/>
     </service>
     <service id="kernel.class_cache.cache_warmer" class="Symfony\Bundle\FrameworkBundle\CacheWarmer\ClassCacheCacheWarmer">
+      <tag name="kernel.cache_warmer"/>
       <argument type="collection">
         <argument>Symfony\Component\HttpFoundation\ParameterBag</argument>
         <argument>Symfony\Component\HttpFoundation\HeaderBag</argument>
@@ -665,7 +672,6 @@
         <argument>Symfony\Component\HttpFoundation\Request</argument>
         <argument>Symfony\Component\HttpKernel\Kernel</argument>
       </argument>
-      <deprecated>The "%service_id%" option is deprecated since version 3.3, to be removed in 4.0.</deprecated>
     </service>
     <service id="cache_clearer" class="Symfony\Component\HttpKernel\CacheClearer\ChainCacheClearer" public="true">
       <argument type="tagged" tag="kernel.cache_clearer"/>
@@ -1736,6 +1742,14 @@
       </call>
       <call method="addListener">
         <argument>kernel.request</argument>
+        <argument type="collection">
+          <argument type="service" id="debug.debug_handlers_listener"/>
+          <argument>configure</argument>
+        </argument>
+        <argument>2048</argument>
+      </call>
+      <call method="addListener">
+        <argument>console.command</argument>
         <argument type="collection">
           <argument type="service" id="debug.debug_handlers_listener"/>
           <argument>configure</argument>
@@ -3101,6 +3115,14 @@
         <argument>!TilowebPagination</argument>
       </call>
       <call method="addPath">
+        <argument>C:\wamp64\www\SmartStartSymfony-master\src\AdminBundle/Resources/views</argument>
+        <argument>Admin</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp64\www\SmartStartSymfony-master\src\AdminBundle/Resources/views</argument>
+        <argument>!Admin</argument>
+      </call>
+      <call method="addPath">
         <argument>C:\wamp64\www\SmartStartSymfony-master\vendor\symfony\symfony\src\Symfony\Bundle\DebugBundle/Resources/views</argument>
         <argument>Debug</argument>
       </call>
@@ -3302,6 +3324,14 @@
       <call method="addPath">
         <argument>C:\wamp64\www\SmartStartSymfony-master\vendor\tiloweb\pagination-bundle\Tiloweb\PaginationBundle/Resources/views</argument>
         <argument>!TilowebPagination</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp64\www\SmartStartSymfony-master\src\AdminBundle/Resources/views</argument>
+        <argument>Admin</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp64\www\SmartStartSymfony-master\src\AdminBundle/Resources/views</argument>
+        <argument>!Admin</argument>
       </call>
       <call method="addPath">
         <argument>C:\wamp64\www\SmartStartSymfony-master\vendor\symfony\symfony\src\Symfony\Bundle\DebugBundle/Resources/views</argument>

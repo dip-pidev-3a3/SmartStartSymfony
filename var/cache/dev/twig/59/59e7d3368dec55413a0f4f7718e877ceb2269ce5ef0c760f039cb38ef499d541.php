@@ -1255,6 +1255,6 @@ class __TwigTemplate_8194456a8fd5156671331b02cfad147e55be72dfb62516d58f65171d1ef
 {% endblock %}
 </body>
 </html>
-", "SmartStartBase.html.twig", "C:\\wamp64\\www\\smartstart\\app\\Resources\\views\\SmartStartBase.html.twig");
+", "SmartStartBase.html.twig", "C:\\wamp64\\www\\SmartStartSymfony-master\\app\\Resources\\views\\SmartStartBase.html.twig");
     }
 }

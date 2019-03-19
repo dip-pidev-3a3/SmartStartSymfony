@@ -591,6 +591,6 @@ class __TwigTemplate_e7ddf898e7615df2ef8103edbd0a2d2ac5a225e947cc99a26fe58f2b545
     </div>
 
 
-{% endblock %}", "default/index.html.twig", "C:\\wamp64\\www\\smartstart\\app\\Resources\\views\\default\\index.html.twig");
+{% endblock %}", "default/index.html.twig", "C:\\wamp64\\www\\SmartStartSymfony-master\\app\\Resources\\views\\default\\index.html.twig");
     }
 }
