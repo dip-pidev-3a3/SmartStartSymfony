@@ -65,7 +65,7 @@ class PostLike
      *
      * @ORM\ManyToOne(targetEntity="Blogposts")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="post_id", referencedColumnName="post_ID")
+     *   @ORM\JoinColumn(name="post_id", referencedColumnName="post_ID",onDelete="CASCADE")
      * })
      */
     private $post;
