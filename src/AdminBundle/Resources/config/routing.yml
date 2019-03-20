@@ -1,3 +1,6 @@
 admin_homepage:
     path:     /Home
     defaults: { _controller: AdminBundle:Default:index }
+admin_listPosts:
+    path:     /Posts
+    defaults: { _controller: AdminBundle:Default:index }
