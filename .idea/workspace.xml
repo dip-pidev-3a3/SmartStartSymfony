@@ -2,15 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="80d0c9f9-799d-4db6-adab-73885a209d1d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/AdminBundle/Controller/PostController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/views/AdminBlogViews/ListPosts.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AdminBundle/Tests/Controller/PostControllerTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AdminBundle/Repository/AdminPostsRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/views/AdminBlogViews/UpdatePost.html.twig" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/var/cache/dev/twig/28/28536725a87094d15629910ace0102186fe0c362d7122630a4645890f5e07c60.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/var/cache/dev/twig/b7/b75689341ce24026373d2534c5b0ce27098d3dfcce6cab5ec610c72f3435a4d8.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Resources/views/BaseAdmin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/BaseAdmin.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/SmartStartBase.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/SmartStartBase.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Controller/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdminBundle/Controller/PostController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/config/routing.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/views/Default/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/views/Default/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/views/AdminBlogViews/ListPosts.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/views/AdminBlogViews/ListPosts.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BlogBundle/Resources/views/BlogViews/Blog.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/BlogBundle/Resources/views/BlogViews/Blog.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/annotations.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/annotations.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml" afterDir="false" />
@@ -1106,6 +1108,7 @@
       <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/55/556e5c2d6203824fba58142cd012a1f3ac4969a82745a7fe5d40e1f1451a4fae.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/twig/55/556e5c2d6203824fba58142cd012a1f3ac4969a82745a7fe5d40e1f1451a4fae.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/56/561522cbbfde4b26da6b1db9bffe26d8a1ddd0a0ba03901c2fdb5e19a52860ac.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/twig/56/561522cbbfde4b26da6b1db9bffe26d8a1ddd0a0ba03901c2fdb5e19a52860ac.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/59/597575348f74e1235e4cd10d21093bc9962f6b74d6da4138116a66fb93c6e574.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/twig/59/597575348f74e1235e4cd10d21093bc9962f6b74d6da4138116a66fb93c6e574.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/59/59e7d3368dec55413a0f4f7718e877ceb2269ce5ef0c760f039cb38ef499d541.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/twig/59/59e7d3368dec55413a0f4f7718e877ceb2269ce5ef0c760f039cb38ef499d541.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/5b/5b49b178f976db67ac4f7bf49c5a4060b0d75f691f1279b27a7be620f13de3db.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/twig/5b/5b49b178f976db67ac4f7bf49c5a4060b0d75f691f1279b27a7be620f13de3db.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/5b/5bf4a1e32c6dc1f8e9330ce881a30537bb2f145ae2bc50c65ddb49dbd99153a5.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/twig/5b/5bf4a1e32c6dc1f8e9330ce881a30537bb2f145ae2bc50c65ddb49dbd99153a5.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/5c/5c4d04b2ad8ed46731779b0ddfeee8d59c835b7986b2534c4503b5c611bd104f.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/twig/5c/5c4d04b2ad8ed46731779b0ddfeee8d59c835b7986b2534c4503b5c611bd104f.php" afterDir="false" />
@@ -1313,6 +1316,15 @@
       <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/ff/ff1b898c4aed964965434780e465ef29930c446d5bedeb4afec09f204544d884.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/twig/ff/ff1b898c4aed964965434780e465ef29930c446d5bedeb4afec09f204544d884.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/validation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/logs/dev.log" beforeDir="false" afterPath="$PROJECT_DIR$/var/logs/dev.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/sessions/dev/sess_3v11bsd79jj8pa1ih7v5r9736o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/sessions/dev/sess_94lcr8ndee10drjtk87hnd5gc6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/sessions/dev/sess_c6adchkmgam2l4empa8flh3lgg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/sessions/dev/sess_cuieg6dj6nci98sgu2js6s4sbn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/sessions/dev/sess_di124tem5j0vs4c18h5p42bo3f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/sessions/dev/sess_igcjafj2toqervkgj1jhf4k1g1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/sessions/dev/sess_o5tmq94jbs0brll5oc4jslb8d1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/sessions/dev/sess_p2ag3c4b5q0iklscrl4ter3ted" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/sessions/dev/sess_tm8ssatq5qsbg37sblke34gqck" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/web/loginassets/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/loginassets/main.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -1341,23 +1353,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BaseAdmin.html.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/BaseAdmin.html.twig">
+      <file leaf-file-name="Blog.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/BlogBundle/Resources/views/BlogViews/Blog.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="200" column="67" selection-start-line="200" selection-start-column="67" selection-end-line="200" selection-end-column="67" />
-              <folding>
-                <element signature="n#style#0;n#ul#0;n#li#0;n#ul#0;n#nav#0;n#div#1;n#head#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/loginassets/main.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="122" column="18" selection-start-line="122" selection-start-column="18" selection-end-line="122" selection-end-column="18" />
+            <state relative-caret-position="114">
+              <caret line="118" column="41" selection-start-line="118" selection-start-column="41" selection-end-line="118" selection-end-column="100" />
             </state>
           </provider>
         </entry>
@@ -1365,8 +1365,21 @@
       <file leaf-file-name="ListPosts.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/AdminBlogViews/ListPosts.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="181" selection-start-line="3" selection-start-column="181" selection-end-line="3" selection-end-column="181" />
+            <state relative-caret-position="131">
+              <caret line="12" column="52" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="75" />
+              <folding>
+                <element signature="e#2788#2795#1#HTML" expanded="true" />
+                <element signature="e#8501#8508#1#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BlogPostsController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/BlogBundle/Controller/BlogPostsController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="590">
+              <caret line="156" column="5" selection-start-line="128" selection-start-column="8" selection-end-line="156" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -1374,8 +1387,29 @@
       <file leaf-file-name="PostController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/PostController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+            <state relative-caret-position="301">
+              <caret line="83" column="36" selection-start-line="83" selection-start-column="36" selection-end-line="83" selection-end-column="36" />
+              <folding>
+                <element signature="e#42#73#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UpdateBlogPost.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/BlogBundle/Resources/views/BlogViews/UpdateBlogPost.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="352">
+              <caret line="105" column="9" selection-start-line="4" selection-start-column="4" selection-end-line="105" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UpdatePost.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/AdminBlogViews/UpdatePost.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="40" column="65" selection-start-line="40" selection-start-column="65" selection-end-line="40" selection-end-column="65" />
             </state>
           </provider>
         </entry>
@@ -1383,29 +1417,26 @@
       <file leaf-file-name="SmartStartBase.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/SmartStartBase.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="38" column="5" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="5" />
+            <state relative-caret-position="131">
+              <caret line="44" column="25" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Blog.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/BlogBundle/Resources/views/BlogViews/Blog.html.twig">
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/loginassets/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="228" column="35" selection-start-line="228" selection-start-column="35" selection-end-line="228" selection-end-column="64" />
-              <folding>
-                <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#section#1;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="85">
+              <caret line="77" column="23" selection-start-line="77" selection-start-column="23" selection-end-line="77" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/Default/index.html.twig">
+      <file leaf-file-name="routing.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/BlogBundle/Resources/config/routing.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
-              <caret line="31" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="255">
+              <caret line="21" selection-start-line="21" selection-end-line="23" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -1413,26 +1444,8 @@
       <file leaf-file-name="routing.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/config/routing.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routing.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DefaultController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/DefaultController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="11" selection-end-column="5" />
+            <state relative-caret-position="187">
+              <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -1441,17 +1454,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Blogpost</find>
-      <find>Blogposts</find>
-      <find>id</find>
-      <find>autho</find>
-      <find>like</find>
-      <find>set</find>
-      <find>thum</find>
-      <find>gpostLikesCount</find>
-      <find>postlike</find>
-      <find>block</find>
-      <find>froal</find>
       <find>js-like</find>
       <find>addb</find>
       <find>java</find>
@@ -1459,18 +1461,29 @@
       <find>postl</find>
       <find>title</find>
       <find>.html</find>
-      <find>post</find>
       <find>jav</find>
-      <find>form</find>
       <find>src</find>
       <find>logi</find>
       <find>img</find>
       <find>pen</find>
       <find>endblock</find>
       <find>bo</find>
-      <find>wrap</find>
-      <find>body</find>
       <find>brand</find>
+      <find>post</find>
+      <find>size</find>
+      <find>body</find>
+      <find>table</find>
+      <find>mana</find>
+      <find>form</find>
+      <find>blogposts</find>
+      <find>content</find>
+      <find>add</find>
+      <find>modal</find>
+      <find>edit</find>
+      <find>delete</find>
+      <find>wrap-menu</find>
+      <find>wrap</find>
+      <find>add admin</find>
     </findStrings>
   </component>
   <component name="FrameworkCommandLineHistory">
@@ -1511,8 +1524,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/AppBundle/Views/Try.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" />
         <option value="$PROJECT_DIR$/tests/OpportunityBundle/Views/blog.html.twig" />
         <option value="$PROJECT_DIR$/src/OpportunityBundle/Resources/views/Default/detailblog.html.twig" />
         <option value="$PROJECT_DIR$/src/OpportunityBundle/Resources/config/routing.yml" />
@@ -1543,7 +1554,6 @@
         <option value="$PROJECT_DIR$/src/BlogBundle/Resources/views/BlogViews/UpdateBlogPost.html.twig" />
         <option value="$PROJECT_DIR$/src/BlogBundle/Form/BlogpostsType.php" />
         <option value="$PROJECT_DIR$/src/BlogBundle/Resources/config/routing.yml" />
-        <option value="$PROJECT_DIR$/app/Resources/views/SmartStartBase.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Blogposts.php" />
         <option value="$PROJECT_DIR$/src/BlogBundle/Repository/BlogPostsRepository.php" />
         <option value="$PROJECT_DIR$/src/BlogBundle/Controller/BlogPostsController.php" />
@@ -1552,16 +1562,19 @@
         <option value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/Security/login_content.html.twig" />
         <option value="$PROJECT_DIR$/web/fosassets/css/style.css" />
         <option value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/views/layout.html.twig" />
-        <option value="$PROJECT_DIR$/src/BlogBundle/Resources/views/BlogViews/Blog.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/PostLike.php" />
         <option value="$PROJECT_DIR$/app/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/Default/index.html.twig" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Controller/DefaultController.php" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Controller/PostController.php" />
+        <option value="$PROJECT_DIR$/app/Resources/views/SmartStartBase.html.twig" />
+        <option value="$PROJECT_DIR$/src/AdminBundle/Repository/AdminPostsRepository.php" />
+        <option value="$PROJECT_DIR$/app/Resources/views/BaseAdmin.html.twig" />
+        <option value="$PROJECT_DIR$/src/BlogBundle/Resources/views/BlogViews/Blog.html.twig" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Resources/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/AdminBlogViews/ListPosts.html.twig" />
-        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/Default/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/AdminBundle/Controller/PostController.php" />
         <option value="$PROJECT_DIR$/web/loginassets/main.css" />
-        <option value="$PROJECT_DIR$/app/Resources/views/BaseAdmin.html.twig" />
+        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/AdminBlogViews/UpdatePost.html.twig" />
       </list>
     </option>
   </component>
@@ -1617,10 +1630,10 @@
       <path value="$PROJECT_DIR$/vendor/kms/froala-editor-bundle" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-10" />
-    <option name="width" value="1938" />
-    <option name="height" value="1058" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="width" value="977" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -1677,6 +1690,13 @@
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="AdminBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="SmartStartSymfony-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SmartStartSymfony-master" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="AdminBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Repository" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="SmartStartSymfony-master" type="b2602c69:ProjectViewProjectNode" />
@@ -1745,6 +1765,14 @@
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="BlogBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="SmartStartSymfony-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SmartStartSymfony-master" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="BlogBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -1793,11 +1821,11 @@
       <recent name="C:\wamp64\www\smartstart\src\BlogBundle" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\SmartStartSymfony-master\src\AdminBundle\Repository" />
       <recent name="C:\wamp64\www\SmartStartSymfony-master\web\loginassets" />
       <recent name="C:\wamp64\www\smartstart\app\Resources\views\FOSUserBundle\views" />
       <recent name="C:\wamp64\www\smartstart\web\fosuserbundleassets" />
       <recent name="C:\wamp64\www\smartstart\src\BlogBundle\Resources\views\BlogViews" />
-      <recent name="C:\wamp64\www\smartstart\src\BlogBundle" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1831,7 +1859,7 @@
       <workItem from="1552930825990" duration="12717000" />
       <workItem from="1552996017249" duration="345000" />
       <workItem from="1553025575068" duration="45000" />
-      <workItem from="1553025645019" duration="10518000" />
+      <workItem from="1553025645019" duration="15935000" />
     </task>
     <task id="LOCAL-00001" summary="init3">
       <created>1552993149171</created>
@@ -1882,11 +1910,18 @@
       <option name="project" value="LOCAL" />
       <updated>1553081409299</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Admin">
+      <created>1553085149976</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1553085149976</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="194259000" />
+    <option name="totallyTimeSpent" value="199676000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1898,12 +1933,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1550" height="846" extended-state="0" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Command Line Tools Console" visible="true" weight="0.32957748" />
+      <window_info anchor="bottom" id="Command Line Tools Console" visible="true" weight="0.33333334" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32957748" />
@@ -1940,20 +1974,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/BlogBundle/Resources/views/BlogViews/Blog.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5338">
-          <caret line="314" column="49" selection-start-line="314" selection-start-column="49" selection-end-line="314" selection-end-column="95" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Persistence/ObjectRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-156">
-          <caret line="38" column="20" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/assets/vendor/bootstrap/css/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="321">
@@ -2057,23 +2077,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/BlogBundle/Resources/views/BlogViews/UpdateBlogPost.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="104" column="4" selection-start-line="104" selection-start-column="4" selection-end-line="104" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Feedback.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-825" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BlogBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="15" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/FosUser.php">
@@ -2184,20 +2190,6 @@
     <entry file="file://$PROJECT_DIR$/web/loginassets/main.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/BlogBundle/Repository/BlogPostsRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="78" column="38" selection-start-line="76" selection-start-column="56" selection-end-line="78" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/BlogBundle/Controller/BlogPostsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1813">
-          <caret line="220" column="53" selection-start-line="220" selection-start-column="53" selection-end-line="220" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/BlogBundle/BlogBundle.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -2208,34 +2200,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="11" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/PostController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/AdminBlogViews/ListPosts.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="181" selection-start-line="3" selection-start-column="181" selection-end-line="3" selection-end-column="181" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/Default/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="394">
@@ -2243,37 +2207,114 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Repository/AdminPostsRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
+          <folding>
+            <element signature="e#123#157#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/BaseAdmin.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="360" column="30" selection-start-line="360" selection-start-column="30" selection-end-line="360" selection-end-column="30" />
+          <folding>
+            <element signature="n#style#0;n#ul#0;n#li#0;n#ul#0;n#nav#0;n#div#1;n#head#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BlogBundle/Repository/BlogPostsRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="78" column="38" selection-start-line="76" selection-start-column="56" selection-end-line="78" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="44" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/BlogBundle/Resources/views/BlogViews/Blog.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="228" column="35" selection-start-line="228" selection-start-column="35" selection-end-line="228" selection-end-column="64" />
+        <state relative-caret-position="114">
+          <caret line="118" column="41" selection-start-line="118" selection-start-column="41" selection-end-line="118" selection-end-column="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BlogBundle/Controller/BlogPostsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="590">
+          <caret line="156" column="5" selection-start-line="128" selection-start-column="8" selection-end-line="156" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BlogBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="21" selection-start-line="21" selection-end-line="23" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BlogBundle/Resources/views/BlogViews/UpdateBlogPost.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="105" column="9" selection-start-line="4" selection-start-column="4" selection-end-line="105" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/PostController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="83" column="36" selection-start-line="83" selection-start-column="36" selection-end-line="83" selection-end-column="36" />
           <folding>
-            <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#section#1;n#!!top" expanded="true" />
+            <element signature="e#42#73#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/SmartStartBase.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="38" column="5" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="5" />
+        <state relative-caret-position="131">
+          <caret line="44" column="25" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/loginassets/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="122" column="18" selection-start-line="122" selection-start-column="18" selection-end-line="122" selection-end-column="18" />
+        <state relative-caret-position="85">
+          <caret line="77" column="23" selection-start-line="77" selection-start-column="23" selection-end-line="77" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/BaseAdmin.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/AdminBlogViews/ListPosts.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="200" column="67" selection-start-line="200" selection-start-column="67" selection-end-line="200" selection-end-column="67" />
+        <state relative-caret-position="131">
+          <caret line="12" column="52" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="75" />
           <folding>
-            <element signature="n#style#0;n#ul#0;n#li#0;n#ul#0;n#nav#0;n#div#1;n#head#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#2788#2795#1#HTML" expanded="true" />
+            <element signature="e#8501#8508#1#HTML" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/AdminBlogViews/UpdatePost.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="40" column="65" selection-start-line="40" selection-start-column="65" selection-end-line="40" selection-end-column="65" />
         </state>
       </provider>
     </entry>

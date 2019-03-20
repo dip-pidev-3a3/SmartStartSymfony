@@ -114,7 +114,7 @@
 
                                 {% if app.user!=null %}
                                 {% if app.user.id==blogposts.author.id %}
-                                <a href="#myModal" class="delete" data-toggle="modal"><i class="fas fa-trash-alt" data-toggle="tooltip" title="Delete"></i></a>
+                                <a href="{{ path('blog_delete',{('postId'):blogposts.postId}) }}" class="delete"><i class="fas fa-trash-alt" data-toggle="tooltip" title="Delete"></i></a>
 
                                 <a href="{{ path('Update_BlogPost',{('postId'):blogposts.postId}) }}"><i class="fas fa-edit" data-toggle="tooltip" title="Edit"></i></a>
                                 {% endif %}

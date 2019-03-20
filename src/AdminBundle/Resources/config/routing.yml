@@ -3,4 +3,10 @@ admin_homepage:
     defaults: { _controller: AdminBundle:Default:index }
 admin_listPosts:
     path:     /Posts
-    defaults: { _controller: AdminBundle:Default:index }
+    defaults: { _controller: AdminBundle:Post:Listposts }
+Admin_deletePost:
+    path:     /deletepost/{postId}
+    defaults: { _controller: AdminBundle:Post:Delete }
+Admin_UpdatePost:
+    path:     /UpdatePost/{postId}
+    defaults: { _controller: AdminBundle:Post:Update }
