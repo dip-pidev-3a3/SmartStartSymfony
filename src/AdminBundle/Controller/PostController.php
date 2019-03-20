@@ -4,6 +4,7 @@ namespace AdminBundle\Controller;
 
 use AppBundle\Entity\Blogposts;
 use BlogBundle\Form\BlogpostsType;
+use BlogBundle\Repository\BlogPostsRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -82,6 +83,12 @@ class PostController extends Controller
         }
 
         return $this->render('@Admin/AdminBlogViews/UpdatePost.html.twig',array('form'=>$form->createView()));
+
+    }
+    public function DetailPostAction($postId)
+    {
+        $Blogpost=$this->getDoctrine()->getRepository(BlogPosts::class)->find($postId);
+        return $this->render('@Admin/AdminBlogViews/Detailpost.html.twig',array('v'=>$Blogpost));
 
     }
 }

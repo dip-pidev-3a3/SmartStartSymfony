@@ -10,3 +10,6 @@ Admin_deletePost:
 Admin_UpdatePost:
     path:     /UpdatePost/{postId}
     defaults: { _controller: AdminBundle:Post:Update }
+Admin_DetailPost:
+    path:     /DetailPost/{postId}
+    defaults: { _controller: AdminBundle:Post:DetailPost }

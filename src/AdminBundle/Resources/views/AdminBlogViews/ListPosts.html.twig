@@ -49,7 +49,7 @@
                     <td>{{ blogposts.articleTitle}}</td>
 
                     <td>
-                        <a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
+                        <a href="{{ path('Admin_DetailPost',{('postId'):blogposts.postId}) }}" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
                         <a href="{{ path('Admin_UpdatePost',{('postId'):blogposts.postId}) }}" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
                         <a href="{{ path('Admin_deletePost',{('postId'):blogposts.postId}) }}" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                     </td>
