@@ -13,3 +13,9 @@ Admin_UpdatePost:
 Admin_DetailPost:
     path:     /DetailPost/{postId}
     defaults: { _controller: AdminBundle:Post:DetailPost }
+admin_listComments:
+    path:     /Comments
+    defaults: { _controller: AdminBundle:Comment:ListComments }
+Admin_deleteComment:
+    path:     /deletecomment/{commentId}
+    defaults: { _controller: AdminBundle:Comment:Delete }

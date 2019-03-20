@@ -393,6 +393,26 @@
         </style>
     {% endblock %}
     {% block javascripts %}
+        <script>
+            function myFunction() {
+                var input, filter, table, tr, td, i, txtValue;
+                input = document.getElementById("myInput");
+                filter = input.value.toUpperCase();
+                table = document.getElementById("myTable");
+                tr = table.getElementsByTagName("tr");
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[0];
+                    if (td) {
+                        txtValue = td.textContent || td.innerText;
+                       if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].style.display = "";
+                        } else {
+                            tr[i].style.display = "none";
+                        }
+                    }
+                }
+            }
+        </script>
         <script async src="{{ asset('//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js') }}"></script>
         <!-- kodhus demos -->
 
@@ -480,7 +500,7 @@
                     <a data-toggle="collapse" data-target="#submenu-1"><i class="fa fa-fw fa-search"></i><span>Blog</span>  <i class="fa fa-fw fa-angle-down pull-right"></i></a>
                     <ul id="submenu-1" class="collapse" style="list-style: none;">
                         <li><a href="{{ path('admin_listPosts') }}">Posts</a></li>
-                        <li><a href="#">Comments</a></li>
+                        <li><a href="{{ path('admin_listComments') }}">Comments</a></li>
                     </ul>
                 </li>
                 <li>

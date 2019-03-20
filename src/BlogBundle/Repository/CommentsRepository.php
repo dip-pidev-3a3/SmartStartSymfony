@@ -14,6 +14,25 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class CommentsRepository extends EntityRepository
 {
+    public function findByPageComments($page = 1, $max = 10)
+    {
+        $dql = $this->createQueryBuilder('comments');
+        $dql->orderBy('comments.commentDate', 'DESC');
+
+        $firstResult = ($page - 1) * $max;
+
+        $query = $dql->getQuery();
+        $query->setFirstResult($firstResult);
+        $query->setMaxResults($max);
+
+        $paginator = new Paginator($query);
+
+        if(($paginator->count() <=  $firstResult) && $page != 1) {
+            throw new NotFoundHttpException('Page not found');
+        }
+
+        return $paginator;
+    }
 
 
 
