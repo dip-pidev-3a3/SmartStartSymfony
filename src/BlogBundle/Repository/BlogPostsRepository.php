@@ -7,6 +7,7 @@
  */
 
 namespace BlogBundle\Repository;
+use Doctrine\DBAL\DBALException;
 use Doctrine\ORM\EntityRepository;
 use Doctrine\ORM\Tools\Pagination\Paginator;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
@@ -27,59 +28,95 @@ class BlogPostsRepository extends EntityRepository
 
         $paginator = new Paginator($query);
 
-        if(($paginator->count() <=  $firstResult) && $page != 1) {
+        if (($paginator->count() <= $firstResult) && $page != 1) {
             throw new NotFoundHttpException('Page not found');
         }
 
         return $paginator;
     }
+
     public function ComsCountAdd($id)
     {
-        $qb=$this->createQueryBuilder('blogpost')
+        $qb = $this->createQueryBuilder('blogpost')
             ->update()
-            ->set('blogpost.postCommentCount','blogpost.postCommentCount + 1')
-            ->where('blogpost.postId='.$id);
+            ->set('blogpost.postCommentCount', 'blogpost.postCommentCount + 1')
+            ->where('blogpost.postId=' . $id);
         echo $qb;
         return $qb->getQuery()
             ->getResult();
     }
+
     public function ComsCountReduce($id)
     {
-        $qb=$this->createQueryBuilder('blogpost')
+        $qb = $this->createQueryBuilder('blogpost')
             ->update()
-            ->set('blogpost.postCommentCount','blogpost.postCommentCount - 1')
-            ->where('blogpost.postId='.$id);
+            ->set('blogpost.postCommentCount', 'blogpost.postCommentCount - 1')
+            ->where('blogpost.postId=' . $id);
         echo $qb;
         return $qb->getQuery()
             ->getResult();
     }
+
     public function LikeCountAdd($id)
     {
-        $qb=$this->createQueryBuilder('blogpost')
+        $qb = $this->createQueryBuilder('blogpost')
             ->update()
-            ->set('blogpost.postLikesCount','blogpost.postLikesCount  + 1')
-            ->where('blogpost.postId='.$id);
+            ->set('blogpost.postLikesCount', 'blogpost.postLikesCount  + 1')
+            ->where('blogpost.postId=' . $id);
 
         return $qb->getQuery()
             ->getResult();
     }
+
     public function LikeCountReduce($id)
     {
-        $qb=$this->createQueryBuilder('blogpost')
+        $qb = $this->createQueryBuilder('blogpost')
             ->update()
-            ->set('blogpost.postLikesCount','blogpost.postLikesCount - 1')
-            ->where('blogpost.postId='.$id);
+            ->set('blogpost.postLikesCount', 'blogpost.postLikesCount - 1')
+            ->where('blogpost.postId=' . $id);
 
         return $qb->getQuery()
             ->getResult();
     }
-    public function findEntitiesByString($str){
-        return $this->getEntityManager()->createQuery( 'SELECT e
+
+    public function findEntitiesByString($str)
+    {
+        return $this->getEntityManager()->createQuery('SELECT e
                 FROM AppBundle:Blogposts e
                 WHERE e.foo LIKE :str')
-            ->setParameter('str', '%'.$str.'%')
+            ->setParameter('str', '%' . $str . '%')
             ->getResult();
     }
 
 
+    public function findMostPopularPosts()
+    {
+        $conn = $this->getEntityManager()
+            ->getConnection();
+        $sql = 'SELECT * FROM `blogposts` WHERE post_likes_count=(SELECT MAX(post_likes_count) FROM blogposts)';
+        try {
+            $stmt = $conn->prepare($sql);
+        } catch (DBALException $e) {
+        }
+        $stmt->execute();
+
+        return $stmt->fetch();
+    }
+
+
+    public function findmostpopularAuthor()
+    {
+        $conn = $this->getEntityManager()
+            ->getConnection();
+        $sql = 'select fos_user.username from fos_user 
+      where fos_user.id=(SELECT blogposts.Author_id FROM `blogposts` 
+      WHERE post_likes_count=(SELECT MAX(post_likes_count) FROM blogposts))';
+        try {
+            $stmt = $conn->prepare($sql);
+        } catch (DBALException $e) {
+        }
+        $stmt->execute();
+        return $stmt->fetch();
+
+    }
 }

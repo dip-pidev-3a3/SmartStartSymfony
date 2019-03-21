@@ -49,6 +49,8 @@ class BlogPostsController extends Controller
         //form
         $form=$this->createForm(BlogpostsType::class,$Blogposts);
         $form=$form->handleRequest($request);
+        $popular=$this->getDoctrine()->getRepository(Blogposts::class)->findMostPopularPosts();
+        $author=$this->getDoctrine()->getRepository(Blogposts::class)->findmostpopularAuthor();
         if($form->isValid())
         {
             $file=$Blogposts->getImage();
