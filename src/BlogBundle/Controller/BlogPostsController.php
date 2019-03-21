@@ -77,7 +77,7 @@ class BlogPostsController extends Controller
             5
         );
 
-        return $this->render('@Blog/BlogViews/Blog.html.twig', array('v' => $listUser,'form'=>$form->createView()));
+        return $this->render('@Blog/BlogViews/Blog.html.twig', array('v' => $listUser,'form'=>$form->createView(),'popular'=>$popular));
 
 
 
@@ -95,6 +95,7 @@ class BlogPostsController extends Controller
     }
     public function DetailPostAction($postId,Request $request)
     { $db = $this->getDoctrine()->getManager();
+        $popular=$this->getDoctrine()->getRepository(Blogposts::class)->findMostPopularPosts();
     $b=new Blogposts();
     $b->setPostId($postId);
 
@@ -125,7 +126,7 @@ class BlogPostsController extends Controller
 
         }
         //envoi form
-        return $this->render('@Blog/BlogViews/DetailBlog.html.twig',array('form'=>$form->createView(),'v' => $listUser,'com'=>$listcom));
+        return $this->render('@Blog/BlogViews/DetailBlog.html.twig',array('form'=>$form->createView(),'v' => $listUser,'com'=>$listcom,'popular'=>$popular));
     }
 
         public function updateAction($postId,Request $request)

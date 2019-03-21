@@ -91,16 +91,10 @@ class BlogPostsRepository extends EntityRepository
 
     public function findMostPopularPosts()
     {
-        $conn = $this->getEntityManager()
-            ->getConnection();
-        $sql = 'SELECT * FROM `blogposts` WHERE post_likes_count=(SELECT MAX(post_likes_count) FROM blogposts)';
-        try {
-            $stmt = $conn->prepare($sql);
-        } catch (DBALException $e) {
-        }
-        $stmt->execute();
-
-        return $stmt->fetch();
+        $dql = $this->createQueryBuilder('blogpost');
+        $dql->orderBy('blogpost.postLikesCount', 'DESC');
+        $query = $dql->getQuery();
+        return $query->getResult();
     }
 
 
