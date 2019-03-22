@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * PostLike
  *
  * @ORM\Table(name="post_like")
- * @ORM\Entity(repositoryClass="AppBundle\Repository\PostLikeRepository")
+ * @ORM\Entity(repositoryClass="BlogBundle\Repository\PostLikeRepository")
  */
 class PostLike
 {

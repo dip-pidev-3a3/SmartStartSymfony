@@ -89,11 +89,12 @@ class BlogPostsRepository extends EntityRepository
     }
 
 
-    public function findMostPopularPosts()
+    public function findMostPopularPosts($max)
     {
         $dql = $this->createQueryBuilder('blogpost');
         $dql->orderBy('blogpost.postLikesCount', 'DESC');
         $query = $dql->getQuery();
+        $query->setMaxResults($max);
         return $query->getResult();
     }
     public function findMostPopularByCat($cat)
@@ -101,6 +102,7 @@ class BlogPostsRepository extends EntityRepository
         $dql = $this->createQueryBuilder('blogpost')->where("blogpost.postType ="."'". $cat."'");
         $dql->orderBy('blogpost.postLikesCount', 'DESC');
         $query = $dql->getQuery();
+        $query->setMaxResults(10);
         return $query->getResult();
     }
     public function findByCat($page = 1, $max = 10,$cat)

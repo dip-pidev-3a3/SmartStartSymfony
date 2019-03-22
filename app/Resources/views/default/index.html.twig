@@ -729,100 +729,46 @@
         <div class="container">
             <div class="title-section-ourmenu t-center m-b-22">
 				<span class="tit2 t-center">
-					Latest News
+					TOP 3
 				</span>
 
                 <h3 class="tit5 t-center m-t-2">
-                    The Blog
+                    ARTICLES
                 </h3>
             </div>
 
             <div class="row">
-                <div class="col-md-4 p-t-30">
-                    <!-- Block1 -->
-                    <div class="blo1">
-                        <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-                            <a href=""><img src="{{ asset('assets/images/blog-01.jpg') }}" alt="IMG-INTRO"></a>
+                {% for blogposts in v  %}
+                    <div class="col-md-4 p-t-30">
+                        <!-- Block1 -->
+                        <div class="blo1">
+                            <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
+                                <a href="{{ path('blog_Detail',{('postId'):blogposts.postId}) }}"><img src="{{ asset('uploads/images/' ~ blogposts.image) }}" alt="IMG-INTRO" width="500" height="250"></a>
 
-                            <div class="time-blog">
-                                21 Dec 2017
+                                <div class="time-blog">
+                                    {{ blogposts.postDate|date("m/d/Y")}}
+                                </div>
+                            </div>
+
+                            <div class="wrap-text-blo1 p-t-35">
+                                <a href=""><h4 class="txt5 color0-hov trans-0-4 m-b-13">
+                                       {{ blogposts.articleTitle }}
+                                    </h4></a>
+
+                                <p class="m-b-20">
+                                    {{ blogposts.postContent }}
+                                </p>
+
+                                <a href="{{ path('blog_Detail',{('postId'):blogposts.postId}) }}" class="txt4">
+                                    Continue Reading
+                                    <i class="fas fa-book-open"></i>
+                                </a>
                             </div>
                         </div>
-
-                        <div class="wrap-text-blo1 p-t-35">
-                            <a href=""><h4 class="txt5 color0-hov trans-0-4 m-b-13">
-                                    Best Places for Wine
-                                </h4></a>
-
-                            <p class="m-b-20">
-                                Phasellus lorem enim, luctus ut velit eget, con-vallis egestas eros.
-                            </p>
-
-                            <a href="" class="txt4">
-                                Continue Reading
-                                <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
-                            </a>
-                        </div>
                     </div>
-                </div>
-
-                <div class="col-md-4 p-t-30">
-                    <!-- Block1 -->
-                    <div class="blo1">
-                        <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-                            <a href=""><img src="{{ asset('assets/images/blog-02.jpg') }}" alt="IMG-INTRO"></a>
-
-                            <div class="time-blog">
-                                15 Dec 2017
-                            </div>
-                        </div>
-
-                        <div class="wrap-text-blo1 p-t-35">
-                            <a href=""><h4 class="txt5 color0-hov trans-0-4 m-b-13">
-                                    Eggs and Cheese
-                                </h4></a>
-
-                            <p class="m-b-20">
-                                Duis elementum, risus sit amet lobortis nunc justo condimentum ligula, vitae feugiat
-                            </p>
-
-                            <a href="" class="txt4">
-                                Continue Reading
-                                <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 p-t-30">
-                    <!-- Block1 -->
-                    <div class="blo1">
-                        <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-                            <a href=""><img src="{{ asset('assets/images/blog-03.jpg') }}" alt="IMG-INTRO"></a>
-
-                            <div class="time-blog">
-                                12 Dec 2017
-                            </div>
-                        </div>
-
-                        <div class="wrap-text-blo1 p-t-35">
-                            <a href=""><h4 class="txt5 color0-hov trans-0-4 m-b-13">
-                                    Style the Wedding Party
-                                </h4></a>
-
-                            <p class="m-b-20">
-                                Sed ornare ligula eget tortor tempor, quis porta tellus dictum.
-                            </p>
-
-                            <a href="" class="txt4">
-                                Continue Reading
-                                <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
+                {% endfor %}
             </div>
+
         </div>
     </section>
 
