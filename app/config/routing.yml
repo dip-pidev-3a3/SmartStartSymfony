@@ -1,3 +1,6 @@
+qanda_space:
+    resource: "@QandABundle/Resources/config/routing.yml"
+    prefix:   /qanda
 admin:
     resource: "@AdminBundle/Resources/config/routing.yml"
     prefix:   /Admin

@@ -107,12 +107,101 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
-        // admin_homepage
-        if ('/Admin/Home' === $pathinfo) {
-            return array (  '_controller' => 'AdminBundle\\Controller\\DefaultController::indexAction',  '_route' => 'admin_homepage',);
+        elseif (0 === strpos($pathinfo, '/qanda')) {
+            // qand_a_homepage
+            if ('/qanda' === $trimmedPathinfo) {
+                $ret = array (  '_controller' => 'QandABundle\\Controller\\DefaultController::indexAction',  '_route' => 'qand_a_homepage',);
+                if ('/' === substr($pathinfo, -1)) {
+                    // no-op
+                } elseif ('GET' !== $canonicalMethod) {
+                    goto not_qand_a_homepage;
+                } else {
+                    return array_replace($ret, $this->redirect($rawPathinfo.'/', 'qand_a_homepage'));
+                }
+
+                return $ret;
+            }
+            not_qand_a_homepage:
+
+            if (0 === strpos($pathinfo, '/qanda/q')) {
+                // qanda_Qadd
+                if ('/qanda/qadd' === $pathinfo) {
+                    return array (  '_controller' => 'QandABundle\\Controller\\QuestionController::addQuestionAction',  '_route' => 'qanda_Qadd',);
+                }
+
+                // qanda_Qupdate
+                if (0 === strpos($pathinfo, '/qanda/qupdate') && preg_match('#^/qanda/qupdate/(?P<id>[^/]++)$#sD', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, ['_route' => 'qanda_Qupdate']), array (  '_controller' => 'QandABundle\\Controller\\QuestionController::updateQuestionAction',));
+                }
+
+                // qanda_Qdelete
+                if (0 === strpos($pathinfo, '/qanda/qdelete') && preg_match('#^/qanda/qdelete/(?P<id>[^/]++)$#sD', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, ['_route' => 'qanda_Qdelete']), array (  '_controller' => 'QandABundle\\Controller\\QuestionController::deleteQuestionAction',));
+                }
+
+                // reply_question
+                if (0 === strpos($pathinfo, '/qanda/qreply') && preg_match('#^/qanda/qreply/(?P<idq>[^/]++)$#sD', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, ['_route' => 'reply_question']), array (  '_controller' => 'QandABundle\\Controller\\ReplyController::replyQuestionAction',));
+                }
+
+            }
+
+            // show_myquestions
+            if ('/qanda/showmyquestions' === $pathinfo) {
+                return array (  '_controller' => 'QandABundle\\Controller\\QuestionController::showMyQuestionsAction',  '_route' => 'show_myquestions',);
+            }
+
+            // update_reply
+            if (0 === strpos($pathinfo, '/qanda/updatereply') && preg_match('#^/qanda/updatereply/(?P<idr>[^/]++)$#sD', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, ['_route' => 'update_reply']), array (  '_controller' => 'QandABundle\\Controller\\ReplyController::updateReplyAction',));
+            }
+
+            // delete_reply
+            if (0 === strpos($pathinfo, '/qanda/deletereply') && preg_match('#^/qanda/deletereply/(?P<idr>[^/]++)$#sD', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, ['_route' => 'delete_reply']), array (  '_controller' => 'QandABundle\\Controller\\ReplyController::deleteReplyAction',));
+            }
+
         }
 
-        if (0 === strpos($pathinfo, '/blog')) {
+        elseif (0 === strpos($pathinfo, '/Admin')) {
+            // admin_homepage
+            if ('/Admin/Home' === $pathinfo) {
+                return array (  '_controller' => 'AdminBundle\\Controller\\DefaultController::indexAction',  '_route' => 'admin_homepage',);
+            }
+
+            // admin_listPosts
+            if ('/Admin/Posts' === $pathinfo) {
+                return array (  '_controller' => 'AdminBundle\\Controller\\PostController::ListpostsAction',  '_route' => 'admin_listPosts',);
+            }
+
+            // Admin_deletePost
+            if (0 === strpos($pathinfo, '/Admin/deletepost') && preg_match('#^/Admin/deletepost/(?P<postId>[^/]++)$#sD', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, ['_route' => 'Admin_deletePost']), array (  '_controller' => 'AdminBundle\\Controller\\PostController::DeleteAction',));
+            }
+
+            // Admin_deleteComment
+            if (0 === strpos($pathinfo, '/Admin/deletecomment') && preg_match('#^/Admin/deletecomment/(?P<commentId>[^/]++)$#sD', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, ['_route' => 'Admin_deleteComment']), array (  '_controller' => 'AdminBundle\\Controller\\CommentController::DeleteAction',));
+            }
+
+            // Admin_UpdatePost
+            if (0 === strpos($pathinfo, '/Admin/UpdatePost') && preg_match('#^/Admin/UpdatePost/(?P<postId>[^/]++)$#sD', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, ['_route' => 'Admin_UpdatePost']), array (  '_controller' => 'AdminBundle\\Controller\\PostController::UpdateAction',));
+            }
+
+            // Admin_DetailPost
+            if (0 === strpos($pathinfo, '/Admin/DetailPost') && preg_match('#^/Admin/DetailPost/(?P<postId>[^/]++)$#sD', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, ['_route' => 'Admin_DetailPost']), array (  '_controller' => 'AdminBundle\\Controller\\PostController::DetailPostAction',));
+            }
+
+            // admin_listComments
+            if ('/Admin/Comments' === $pathinfo) {
+                return array (  '_controller' => 'AdminBundle\\Controller\\CommentController::ListCommentsAction',  '_route' => 'admin_listComments',);
+            }
+
+        }
+
+        elseif (0 === strpos($pathinfo, '/blog')) {
             // blog_homepage
             if ('/blog' === $trimmedPathinfo) {
                 $ret = array (  '_controller' => 'BlogBundle\\Controller\\DefaultController::indexAction',  '_route' => 'blog_homepage',);
