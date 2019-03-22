@@ -141,22 +141,21 @@
 
                                 <div class="txt32 flex-w p-b-24">
 									<span>
-										by {{ blogposts.author.username }}
+										<i class="fas fa-user" style="color: midnightblue"></i> by {{ blogposts.author.username }}
 										<span class="m-r-6 m-l-4">|</span>
 									</span>
 
                                     <span>
-										{{ blogposts.postDate|date("m/d/Y")}}
+										<i class="far fa-calendar" style="color: midnightblue;"></i> {{ blogposts.postDate|date("m/d/Y")}}
 										<span class="m-r-6 m-l-4">|</span>
 									</span>
 
                                     <span>
-										{{ blogposts.postType }}
+										<i class="fas fa-quote-left"style="color: midnightblue"></i> {{ blogposts.postType }}
 										<span class="m-r-6 m-l-4">|</span>
 									</span>
-
                                     <span>
-										{{ blogposts.postCommentCount }} Comments
+										<i class="fas fa-comments" style="color:midnightblue"></i> {{ blogposts.postCommentCount }} Comments
                                         <span class="m-r-6 m-l-4">|</span>
 									</span>
 
@@ -229,6 +228,7 @@
                                 <p style=" word-wrap:break-word">
                                     {{ blogposts.articleContent|raw }}
                                 </p>
+                                <br>
 
                                 <a class="dis-block txt4m-t-30" href="{{ path('blog_Detail',{('postId'):blogposts.postId}) }}">
                                 Continue Reading
