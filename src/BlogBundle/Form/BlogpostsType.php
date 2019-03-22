@@ -19,11 +19,11 @@ class BlogpostsType extends AbstractType
     {
         $builder->add('postContent')->add('postType', ChoiceType::class, array(
             'choices'  => array(
-                'Newsjacking' => "Newsjacking",
-                'Instructional' => "Instructional Post",
-                'Personal Spotlight' => "Personal Spotlight Post",
-                'Cheat Sheet' => "Cheat Sheet Post",
-                'Media' => "Media Post",
+                'Newsjacking' => "NewsjackingPost",
+                'Instructional' => "InstructionalPost",
+                'Personal Spotlight' => "PersonalSpotlightPost",
+                'Cheat Sheet' => "CheatSheetPost",
+                'Media' => "MediaPost",
                 'Entertaining' => "Entertaining",
             )))->add('image',FileType::class,array('label'=>'inserer une imamge'))
             ->add('articleTitle')->add('articleContent',null,array('attr' =>array('class' =>'ckeditor')));

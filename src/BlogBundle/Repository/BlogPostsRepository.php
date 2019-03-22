@@ -96,6 +96,32 @@ class BlogPostsRepository extends EntityRepository
         $query = $dql->getQuery();
         return $query->getResult();
     }
+    public function findMostPopularByCat($cat)
+    {
+        $dql = $this->createQueryBuilder('blogpost')->where("blogpost.postType ="."'". $cat."'");
+        $dql->orderBy('blogpost.postLikesCount', 'DESC');
+        $query = $dql->getQuery();
+        return $query->getResult();
+    }
+    public function findByCat($page = 1, $max = 10,$cat)
+    {
+        $dql = $this->createQueryBuilder('blogpost')->where("blogpost.postType ="."'". $cat."'");
+        $dql->orderBy('blogpost.postDate', 'DESC');
+
+        $firstResult = ($page - 1) * $max;
+
+        $query = $dql->getQuery();
+        $query->setFirstResult($firstResult);
+        $query->setMaxResults($max);
+
+        $paginator = new Paginator($query);
+
+        if (($paginator->count() <= $firstResult) && $page != 1) {
+            throw new NotFoundHttpException('Page not found');
+        }
+
+        return $paginator;
+    }
 
 
     public function findmostpopularAuthor()

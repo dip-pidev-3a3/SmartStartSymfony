@@ -19,17 +19,18 @@
                     Home
                 </a>
 
-                <span class="txt29 m-l-10 m-r-10">/</span>
+                <span class="txt29 m-l-10 m-r-10" style="color: black">/</span>
 
-                <a href="{{ path('blog_ListPosts') }}" class="txt27">
-                    Blog
+                <a href="{{ path('blog_ListPosts') }}" >
+
+                    {{ app.request.attributes.get('cat') }}
                 </a>
 
-        {% if app.user!=null %}
+                {% if app.user!=null %}
             </div>
             <a href="#addEmployeeModal" class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add A Post</span></a>
 
-            </div>
+        </div>
         <!-- Add Modal HTML -->
         <div id="addEmployeeModal" class="modal fade">
             <div class="modal-dialog">
@@ -92,76 +93,76 @@
 
                         <!-- Block4 -->
                         {% for blogposts in v %}
-                        <div class="blo4 p-b-63" id="content">
-                            <div class="pic-blo4 hov-img-zoom bo-rad-10 pos-relative">
-                                <a href={{ path('blog_Detail',{('postId'):blogposts.postId}) }}>
-                                    <img  src="{{ asset('uploads/images/' ~ blogposts.image) }}" width="600" height="427" alt="IMG-BLOG">
-                                </a>
+                            <div class="blo4 p-b-63" id="content">
+                                <div class="pic-blo4 hov-img-zoom bo-rad-10 pos-relative">
+                                    <a href={{ path('blog_Detail',{('postId'):blogposts.postId}) }}>
+                                        <img  src="{{ asset('uploads/images/' ~ blogposts.image) }}" width="600" height="427" alt="IMG-BLOG">
+                                    </a>
 
-                                <div class="date-blo4 flex-col-c-m">
+                                    <div class="date-blo4 flex-col-c-m">
 									<span class="txt30 m-b-4">
 
 
 									</span>
 
-                                    <span class="txt31">
+                                        <span class="txt31">
 										{{ blogposts.postDate|date("m/d/Y")}}
 									</span>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="text-blo4 p-t-33">
+                                <div class="text-blo4 p-t-33">
 
-                                {% if app.user!=null %}
-                                {% if app.user.id==blogposts.author.id %}
-                                <a href="{{ path('blog_delete',{('postId'):blogposts.postId}) }}" class="delete"><i class="fas fa-trash-alt" data-toggle="tooltip" title="Delete"></i></a>
+                                    {% if app.user!=null %}
+                                        {% if app.user.id==blogposts.author.id %}
+                                            <a href="{{ path('blog_delete',{('postId'):blogposts.postId}) }}" class="delete"><i class="fas fa-trash-alt" data-toggle="tooltip" title="Delete"></i></a>
 
-                                <a href="{{ path('Update_BlogPost',{('postId'):blogposts.postId}) }}"><i class="fas fa-edit" data-toggle="tooltip" title="Edit"></i></a>
-                                {% endif %}
-                                {% endif %}
-                                {% if app.user!=null %}
-                                <a href="{{ path('blog_Like',{('postId'):blogposts.postId,('id'):app.user.id}) }}" class="link">
-                                    <i class="far fa-thumbs-up" style="color:midnightblue"></i>
-                                    <span class="js-likes" style="color: midnightblue">{{ blogposts.postLikesCount }}</span>
-                                    <span class="js-label" style="color: midnightblue">Like</span>
-                                </a>
-                                {% endif %}
-                                {% if app.user==null %}
-                                    <a>
-                                        <i class="far fa-thumbs-up" style="color:midnightblue"></i>
-                                        <span class="js-likes" style="color: midnightblue">{{ blogposts.postLikesCount }}</span>
-                                        <span class="js-label" style="color: midnightblue">Like</span>
-                                    </a>
-                                {% endif %}
+                                            <a href="{{ path('Update_BlogPost',{('postId'):blogposts.postId}) }}"><i class="fas fa-edit" data-toggle="tooltip" title="Edit"></i></a>
+                                        {% endif %}
+                                    {% endif %}
+                                    {% if app.user!=null %}
+                                        <a href="{{ path('blog_Like',{('postId'):blogposts.postId,('id'):app.user.id}) }}" class="link">
+                                            <i class="far fa-thumbs-up" style="color:midnightblue"></i>
+                                            <span class="js-likes" style="color: midnightblue">{{ blogposts.postLikesCount }}</span>
+                                            <span class="js-label" style="color: midnightblue">Like</span>
+                                        </a>
+                                    {% endif %}
+                                    {% if app.user==null %}
+                                        <a>
+                                            <i class="far fa-thumbs-up" style="color:midnightblue"></i>
+                                            <span class="js-likes" style="color: midnightblue">{{ blogposts.postLikesCount }}</span>
+                                            <span class="js-label" style="color: midnightblue">Like</span>
+                                        </a>
+                                    {% endif %}
 
-                                <h4 class="p-b-16">
-                                    <a href={{ path('blog_Detail',{('postId'):blogposts.postId}) }} class="tit9">{{ blogposts.postContent }}</a>
-                                </h4>
+                                    <h4 class="p-b-16">
+                                        <a href={{ path('blog_Detail',{('postId'):blogposts.postId}) }} class="tit9">{{ blogposts.postContent }}</a>
+                                    </h4>
 
 
-                                <div class="txt32 flex-w p-b-24">
+                                    <div class="txt32 flex-w p-b-24">
 									<span>
 										by {{ blogposts.author.username }}
-										<span class="m-r-6 m-l-4">|</span>
+                                        <span class="m-r-6 m-l-4">|</span>
 									</span>
 
-                                    <span>
+                                        <span>
 										{{ blogposts.postDate|date("m/d/Y")}}
-										<span class="m-r-6 m-l-4">|</span>
+                                            <span class="m-r-6 m-l-4">|</span>
 									</span>
 
-                                    <span>
+                                        <span>
 										{{ blogposts.postType }}
-										<span class="m-r-6 m-l-4">|</span>
+                                            <span class="m-r-6 m-l-4">|</span>
 									</span>
 
-                                    <span>
+                                        <span>
 										{{ blogposts.postCommentCount }} Comments
                                         <span class="m-r-6 m-l-4">|</span>
 									</span>
 
 
-                                    {% if app.user!=null %}
+                                        {% if app.user!=null %}
 
                                             <!-- Modal HTML -->
                                             <div id="myModal" class="modal fade">
@@ -222,20 +223,20 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                    {% endif %}
+                                        {% endif %}
 
+                                    </div>
+
+                                    <p style=" word-wrap:break-word">
+                                        {{ blogposts.articleContent|raw }}
+                                    </p>
+
+                                    <a class="dis-block txt4m-t-30" href="{{ path('blog_Detail',{('postId'):blogposts.postId}) }}">
+                                        Continue Reading
+                                        <i class="fas fa-book-open"></i>
+                                    </a>
                                 </div>
-
-                                <p style=" word-wrap:break-word">
-                                    {{ blogposts.articleContent|raw }}
-                                </p>
-
-                                <a class="dis-block txt4m-t-30" href="{{ path('blog_Detail',{('postId'):blogposts.postId}) }}">
-                                Continue Reading
-                                <i class="fas fa-book-open"></i>
-                                </a>
                             </div>
-                        </div>
                         {% endfor %}
 
 
@@ -301,6 +302,7 @@
                                 </li>
                             </ul>
                         </div>
+
 
                         <!-- Most Popular -->
                         <div style="word-wrap: break-word" class="popular">
@@ -437,7 +439,6 @@
 
 
 {% endblock %}
-
 
 
 

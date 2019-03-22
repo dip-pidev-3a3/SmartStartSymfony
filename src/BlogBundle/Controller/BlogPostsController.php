@@ -209,7 +209,7 @@ class BlogPostsController extends Controller
 
 
     }
-    public function searchAction(Request $request)
+    /*public function searchAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
         $requestString = $request->get('q');
@@ -227,6 +227,41 @@ class BlogPostsController extends Controller
             $realEntities[$entities->getPostId()] = $entity->getFoo();
         }
         return $realEntities;
+    }*/
+    public function PostsByCatAction($cat,Request $request)
+    {
+        $Blogposts=new Blogposts();
+        $D=new \DateTime();
+        //form
+        $form=$this->createForm(BlogpostsType::class,$Blogposts);
+        $form=$form->handleRequest($request);
+        $post=$this->getDoctrine()->getRepository(Blogposts::class)->findBy(array('postType'=>$cat));
+        $popular=$this->getDoctrine()->getRepository(Blogposts::class)->findMostPopularByCat($cat);
+        if($form->isValid())
+        {
+            $file=$Blogposts->getImage();
+            $fileName=md5(uniqid()).'.'.$file->guessExtension();
+            $file->move($this->getParameter('image_directory'),$fileName);
+            $em=$this->getDoctrine()->getManager();
+            $user = $this->container->get('security.token_storage')->getToken()->getUser();
+            $em->persist($Blogposts);
+
+            $Blogposts->setAuthor($user);
+            $Blogposts->setPostDate($D);
+            $Blogposts->setImage($fileName);
+            $Blogposts->setPostLikesCount(0);
+            $em->flush();
+            return $this->redirect($request->getUri());
+
+        }
+        $db = $this->getDoctrine()->getManager();
+
+        $listUser = $db->getRepository('AppBundle:Blogposts')->findByCat(
+            $request->query->getInt('page', 1),
+            5,$cat
+        );
+        return $this->render('@Blog/BlogViews/PostsByCat.html.twig',array('v'=>$listUser,'popular'=>$popular,'form'=>$form->createView()));
     }
+
 
 }

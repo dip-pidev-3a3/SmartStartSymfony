@@ -22,6 +22,9 @@ blog_Like:
 Update_BlogPost:
     path:     /UpdatePost/{postId}
     defaults: { _controller: BlogBundle:BlogPosts:Update }
+Blog_PostCat:
+    path:     /PostCat/{cat}
+    defaults: { _controller: BlogBundle:BlogPosts:PostsByCat }
 blog_AddComment:
     path:     /AddComment
     defaults: { _controller: BlogBundle:Comments:AddComment }
