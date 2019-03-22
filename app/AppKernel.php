@@ -22,6 +22,7 @@ class AppKernel extends Kernel
             new BlogBundle\BlogBundle(),
             new Tiloweb\PaginationBundle\TilowebPaginationBundle(),
             new AdminBundle\AdminBundle(),
+            new ContractBundle\ContractBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
