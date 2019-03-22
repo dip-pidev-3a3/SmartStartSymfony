@@ -262,6 +262,15 @@ class BlogPostsController extends Controller
         );
         return $this->render('@Blog/BlogViews/PostsByCat.html.twig',array('v'=>$listUser,'popular'=>$popular,'form'=>$form->createView()));
     }
+    public function ManagerAction()
+    { $user=new FosUser();
+
+        $user = $this->container->get('security.token_storage')->getToken()->getUser();
+
+        $popular=$this->getDoctrine()->getRepository(Blogposts::class)->findMostPopularPostsByUser(3,$user->getId());
+        $posts=$this->getDoctrine()->getRepository(Blogposts::class)->findBy(['author' => $user->getId()]);
+        return $this->render('@Blog/BlogViews/BlogManagment.html.twig',array('pop'=>$popular,'v'=>$posts));
+    }
 
 
 }

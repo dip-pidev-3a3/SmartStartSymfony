@@ -16,6 +16,9 @@ blog_ListPosts:
 blog_Detail:
     path:     /DetailPost/{postId}
     defaults: { _controller: BlogBundle:BlogPosts:DetailPost }
+blog_Managment:
+    path:     /BlogManager
+    defaults: { _controller: BlogBundle:BlogPosts:Manager }
 blog_Like:
     path:     /Like/{postId}/{id}
     defaults: { _controller: BlogBundle:BlogPosts:Like }

@@ -373,6 +373,12 @@
         </span>
 </div>
 {% block javascripts %}
+    <script>
+
+        $(function () {
+            $("#mdb-lightbox-ui").load("mdb-addons/mdb-lightbox-ui.html");
+        });
+    </script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script>
         var likelink=document.querySelectorAll('link')

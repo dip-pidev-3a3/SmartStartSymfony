@@ -141,4 +141,12 @@ class BlogPostsRepository extends EntityRepository
         return $stmt->fetch();
 
     }
+    public function findMostPopularPostsByUser($max,$user)
+    {
+        $dql = $this->createQueryBuilder('blogpost')->where('blogpost.author='.$user);
+        $dql->orderBy('blogpost.postLikesCount', 'DESC');
+        $query = $dql->getQuery();
+        $query->setMaxResults($max);
+        return $query->getResult();
+    }
 }

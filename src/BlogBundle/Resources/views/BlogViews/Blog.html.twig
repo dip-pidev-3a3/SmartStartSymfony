@@ -26,10 +26,14 @@
                 </a>
 
         {% if app.user!=null %}
-            </div>
-            <a href="#addEmployeeModal" class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add A Post</span></a>
 
-            </div>
+        <div class="btn-group btn-group-justified">
+            <a href="#addEmployeeModal" class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto"
+               data-toggle="modal"><i class="material-icons">&#xE147;</i>   Add A Post</a>
+            <a href="{{ path('blog_Managment') }}" class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto"
+               ><i class="fas fa-tasks"></i> Blog Manager</a>
+        </div>
+
         <!-- Add Modal HTML -->
         <div id="addEmployeeModal" class="modal fade">
             <div class="modal-dialog">
