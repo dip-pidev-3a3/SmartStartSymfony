@@ -1,0 +1,51 @@
+{% extends "SmartStartBase.html.twig" %}
+{% block title %}reply this questions{% endblock %}
+{% block body %}
+    <!-- Title Page -->
+    <section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15" style="background-image: url({{ asset('assets/images/blog-banner.png') }});">
+        <h2 class="tit6 t-center">
+        </h2>
+    </section>
+    <section>
+        <center>
+            <form>
+            <tr> <td> <input type="text" value="Exemple" id="repx" style="border:solid 1px black; border-radius:5px; text-align:left; box-shadow:0 0 6px;" /> </td>
+                <td> <a href="{{ path('reply_question',{'idq':quest.id }) }}"> <button> Reply </button> </a> </td> </tr>
+            </form>
+                <table border="2">
+                <h1> List questions </h1>
+                <tr> <th>id  </th><th>question  </th><th>description  </th><th>posted in </th><th>subject  </th><th>user  </th><th>answered in  </th></tr>
+                    <tr>
+                        <td> {{ quest.id }} </td>
+                        <td> {{ quest.question }} </td>
+                        <td> {{ quest.description }} </td>
+                        <td> {{ quest.postdate|date }} </td>
+                        <td> {{ quest.subject }} </td>
+                        <td> {{ quest.idu.id }} </td>
+                        <td> {{ quest.answered|date }} </td>
+                    </tr>
+    {% for r in responses %}
+<tr>
+    <td> {{ r.content }} </td>
+    <td> {{ r.replydate|date }} </td>
+    <td> {{ r.theanswer|date }} </td>
+    <td> {{ r.score }} </td>
+    <td> {{ r.idu.id }} </td>
+</tr>
+{% endfor %}
+            </table>
+            <div> {{ form_start(fr) }}
+                    <tr><td>content:</td><td> {{ form_widget(fr.content) }} </td> </tr>
+                    {{ form_start(cl) }}
+                    <tr><td>file:</td><td> {{ form_widget(cl.file) }} </td> </tr>
+                    <tr><td>image:</td><td> {{ form_widget(cl.img) }} </td> </tr>
+                    <tr><td>vocal:</td><td> {{ form_widget(cl.vocal) }} </td> </tr>
+                    <tr><td>video:</td><td> {{ form_widget(cl.video) }} </td> </tr>
+                    {{ form_end(cl) }}
+                    <tr><td></td><td> {{ form_widget(form.Reply) }} </td> </tr>
+                {{ form_end(fr) }}
+            </div>
+            <a href="{{ path('qand_a_homepage' ) }}" > <button>home</button> </a>
+        </center>
+    </section>
+{% endblock %}

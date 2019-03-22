@@ -1,0 +1,25 @@
+qand_a_homepage:
+    path:     /
+    defaults: { _controller: QandABundle:Default:index }
+qanda_Qadd:
+    path:     /qadd
+    defaults: { _controller: QandABundle:Question:addQuestion }
+qanda_Qupdate:
+    path:     /qupdate/{id}
+    defaults: { _controller: QandABundle:Question:updateQuestion }
+qanda_Qdelete:
+    path:     /qdelete/{id}
+    defaults: { _controller: QandABundle:Question:deleteQuestion }
+show_myquestions:
+    path:     /showmyquestions
+    defaults: { _controller: QandABundle:Question:showMyQuestions }
+
+reply_question:
+    path:     /qreply/{idq}
+    defaults: { _controller: QandABundle:Reply:replyQuestion }
+update_reply:
+    path:     /updatereply/{idr}
+    defaults: { _controller: QandABundle:Reply:updateReply }
+delete_reply:
+    path:     /deletereply/{idr}
+    defaults: { _controller: QandABundle:Reply:deleteReply }

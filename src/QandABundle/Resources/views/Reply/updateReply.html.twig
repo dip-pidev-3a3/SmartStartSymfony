@@ -1,0 +1,36 @@
+<html>
+<head>
+
+    <title> crud reply </title>
+</head>
+
+<body>
+<center>
+    <h1>
+        update reply
+    </h1>
+
+
+    {{ form_start(form) }}
+    <table>
+        <tr><td>content:</td><td> {{ form_widget(form.content) }} </td> </tr>
+        {{ form_start(cl) }}
+        <tr><td>file:</td><td> {{ form_widget(cl.file) }} </td> </tr>
+        <tr><td>image:</td><td> {{ form_widget(cl.img) }} </td> </tr>
+        <tr><td>vocal:</td><td> {{ form_widget(cl.vocal) }} </td> </tr>
+        <tr><td>video:</td><td> {{ form_widget(cl.video) }} </td> </tr>
+        {{ form_end(cl) }}
+        <tr><td></td><td> {{ form_widget(form.Add) }} </td> </tr>
+    </table>
+    {{ form_end(form) }}
+
+
+    <a href="{{ path('qand_a_homepage' ) }}" > <button>home</button> </a>
+
+</center>
+</body>
+
+
+</html>
+
+

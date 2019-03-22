@@ -1,0 +1,38 @@
+{% extends "SmartStartBase.html.twig" %}
+{% block title %}add question{% endblock %}
+{% block body %}
+    <!-- Title Page -->
+    <section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15" style="background-image: url({{ asset('assets/images/blog-banner.png') }});">
+        <h2 class="tit6 t-center">
+        </h2>
+    </section>
+<section>
+<center>
+    <h1>
+        new question
+    </h1>
+
+
+    {{ form_start(form) }}
+    <table>
+        <tr><td>question:</td><td> {{ form_widget(form.question) }} </td> </tr>
+        <tr><td>description:</td><td> {{ form_widget(form.description) }} </td> </tr>
+        <tr><td>suject:</td><td> {{ form_widget(form.subject) }} </td> </tr>
+        {{ form_start(cl) }}
+        <tr><td>file:</td><td> {{ form_widget(cl.file) }} </td> </tr>
+        <tr><td>image:</td><td> {{ form_widget(cl.img) }} </td> </tr>
+        <tr><td>vocal:</td><td> {{ form_widget(cl.vocal) }} </td> </tr>
+        <tr><td>video:</td><td> {{ form_widget(cl.video) }} </td> </tr>
+        {{ form_end(cl) }}
+        <tr><td></td><td> {{ form_widget(form.Add) }} </td> </tr>
+    </table>
+    {{ form_end(form) }}
+
+
+    <a href="{{ path('qand_a_homepage' ) }}" > <button>home</button> </a>
+
+</center>
+</section>
+{% endblock %}
+
+

@@ -1,25 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="80d0c9f9-799d-4db6-adab-73885a209d1d" name="Default" comment="">
+    <list default="true" id="80d0c9f9-799d-4db6-adab-73885a209d1d" name="Default" comment="larou2si:first try, call if is there any problems :)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/AppKernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AppKernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/SmartStartBase.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/SmartStartBase.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/config/parameters.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/parameters.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/routing.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php.meta" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.php.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml.meta" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainer.xml.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerCompiler.log" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerCompiler.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerDeprecations.log" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerDeprecations.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlGenerator.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlGenerator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlGenerator.php.meta" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlGenerator.php.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlMatcher.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlMatcher.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlMatcher.php.meta" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/appDevDebugProjectContainerUrlMatcher.php.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/logs/dev.log" beforeDir="false" afterPath="$PROJECT_DIR$/var/logs/dev.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -58,8 +42,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/SmartStartBase.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="126" column="41" selection-start-line="126" selection-start-column="41" selection-end-line="126" selection-end-column="41" />
+            <state relative-caret-position="175">
+              <caret line="124" column="19" lean-forward="true" selection-start-line="124" selection-start-column="19" selection-end-line="124" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -299,20 +283,13 @@
             <path>
               <item name="SmartStartSymfony" type="b2602c69:ProjectViewProjectNode" />
               <item name="SmartStartSymfony" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SmartStartSymfony" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SmartStartSymfony" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SmartStartSymfony" type="b2602c69:ProjectViewProjectNode" />
               <item name="SmartStartSymfony" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="QandABundle" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -375,7 +352,7 @@
       <workItem from="1553025575068" duration="45000" />
       <workItem from="1553025645019" duration="15935000" />
       <workItem from="1553186919049" duration="2928000" />
-      <workItem from="1553214813029" duration="1741000" />
+      <workItem from="1553214813029" duration="2850000" />
     </task>
     <task id="LOCAL-00001" summary="init3">
       <created>1552993149171</created>
@@ -433,11 +410,18 @@
       <option name="project" value="LOCAL" />
       <updated>1553085149976</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="larou2si:first try, call if is there any problems :)">
+      <created>1553216954684</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1553216954684</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="204345000" />
+    <option name="totallyTimeSpent" value="205454000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -479,16 +463,10 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init3" />
     <MESSAGE value="Admin" />
-    <option name="LAST_COMMIT_MESSAGE" value="Admin" />
+    <MESSAGE value="larou2si:first try, call if is there any problems :)" />
+    <option name="LAST_COMMIT_MESSAGE" value="larou2si:first try, call if is there any problems :)" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Controller/ProfileController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-459">
-          <caret line="58" column="5" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Controller/RegistrationController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2426" />
@@ -804,10 +782,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/SmartStartBase.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="126" column="41" selection-start-line="126" selection-start-column="41" selection-end-line="126" selection-end-column="41" />
+        <state relative-caret-position="175">
+          <caret line="124" column="19" lean-forward="true" selection-start-line="124" selection-start-column="19" selection-end-line="124" selection-end-column="19" />
         </state>
       </provider>
     </entry>

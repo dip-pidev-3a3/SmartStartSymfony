@@ -1,0 +1,39 @@
+{% extends "SmartStartBase.html.twig" %}
+{% block title %}Q & A{% endblock %}
+{% block body %}
+    <section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15" style="background-image: url({{ asset('assets/images/blog-banner.png') }});">
+        <h2 class="tit6 t-center">
+            questions
+        </h2>
+    </section>
+
+<section>
+    <div>
+{% for m in questions %}
+    <!-- Default box -->
+        <a href="{{ path('reply_question',{'idq':m.id} ) }}" >   <div class="box">
+        <div class="box-header with-border">
+            <h3 class="box-title">{{ m.question }}</h3>
+
+            <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="" data-original-title="Collapse">
+                    <i class="fa fa-minus"></i> 2 </button>
+                <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="" data-original-title="Collapse">
+                    <i class="fa fa-minus"></i></button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="" data-original-title="Remove">
+                    <i class="fa fa-times"></i></button>
+            </div>
+        </div>
+        <div class="box-body">
+             m.idc.img | m.idc.file | m.idc.vocal | m.idc.video
+        </div>
+        <!-- /.box-body -->
+        <div class="box-footer">
+            {{ m.description }}
+        </div>
+        <!-- /.box-footer-->
+            </div> </a>
+{% endfor %}
+    </div>
+</section>
+{% endblock %}
