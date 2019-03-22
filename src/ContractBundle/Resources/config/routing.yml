@@ -1,0 +1,3 @@
+my_contracts:
+    path:     /myContracts
+    defaults: { _controller: ContractBundle:Default:index }
