@@ -9,3 +9,15 @@ d1a57a,::1,GET,http://localhost/SmartStartSymfony/web/app_dev.php/,1553355297,,2
 e33349,::1,POST,http://localhost/SmartStartSymfony/web/app_dev.php/login_check,1553355412,,302
 6b0529,::1,GET,http://localhost/SmartStartSymfony/web/app_dev.php/,1553355416,,200
 b7e0a0,::1,GET,http://localhost/SmartStartSymfony/web/app_dev.php/contract/myContracts,1553355445,,200
+4d8757,::1,GET,http://localhost/SmartStartSymfony/web/app_dev.php/blog/listposts,1553356199,,200
+6712b1,::1,GET,http://localhost/SmartStartSymfony/web/app_dev.php/blog/listposts,1553362017,,200
+0b0c95,::1,GET,http://localhost/SmartStartSymfony/web/app_dev.php/contract/myContracts,1553362490,,200
+e14e26,::1,GET,http://localhost/SmartStartSymfony/web/app_dev.php/contract/myContracts,1553362624,,200
+6afa4e,::1,GET,http://localhost/SmartStartSymfony/web/app_dev.php/contract/myContracts,1553362806,315100,200
+315100,::1,GET,http://localhost/SmartStartSymfony/web/app_dev.php/contract/myContracts,1553362806,,500
+e75659,::1,GET,http://localhost/SmartStartSymfony/web/app_dev.php/contract/myContracts,1553362965,63b952,200
+63b952,::1,GET,http://localhost/SmartStartSymfony/web/app_dev.php/contract/myContracts,1553362965,,500
+8e7a60,::1,GET,http://localhost/SmartStartSymfony/web/app_dev.php/contract/myContracts,1553363109,d03365,200
+d03365,::1,GET,http://localhost/SmartStartSymfony/web/app_dev.php/contract/myContracts,1553363109,,500
+332ad1,::1,GET,http://localhost/SmartStartSymfony/web/app_dev.php/contract/myContracts,1553363133,,200
+2ffc0c,::1,GET,http://localhost/SmartStartSymfony/web/app_dev.php/contract/myContracts,1553365626,,200

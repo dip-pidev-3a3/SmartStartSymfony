@@ -14,7 +14,7 @@ class DefaultController extends Controller
         $user=new FosUser();
         $user = $this->container->get('security.token_storage')->getToken()->getUser();
         $contracts = $this->getDoctrine()->getRepository(Contract::class)->getMyContracts($user->getId());
-
-        return $this->render('@Contract/Default/index.html.twig',array('con'=>$contracts));
+        $j=0;
+        return $this->render('@Contract/Default/index.html.twig',array('con'=>$contracts,'j'=>$j));
     }
 }

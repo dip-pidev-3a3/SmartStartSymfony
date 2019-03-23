@@ -98,7 +98,8 @@ class __TwigTemplate_3c0c8a9d0fb7d8428a01587e4a83466c3f615b39570411fcb0975f1fb6c
         $context['_seq'] = twig_ensure_traversable(($context["con"] ?? $this->getContext($context, "con")));
         foreach ($context['_seq'] as $context["_key"] => $context["i"]) {
             // line 26
-            echo "        <div class=\"modal-dialog modal-lg\" role=\"document\" style=\"display: inline-block\">
+            echo "        
+        <div class=\"modal-dialog modal-lg\" role=\"document\" style=\"display: inline-block\">
             <div class=\"modal-content\">
                 <div class=\"modal-body\">
                     <div class=\"row\">
@@ -122,7 +123,7 @@ class __TwigTemplate_3c0c8a9d0fb7d8428a01587e4a83466c3f615b39570411fcb0975f1fb6c
                             <h4 class=\"h4-responsive\">
               <span class=\"green-text\">
                 <strong>\$";
-            // line 49
+            // line 50
             echo twig_escape_filter($this->env, $this->getAttribute($context["i"], "sum", []), "html", null, true);
             echo "</strong>
               </span>
@@ -147,7 +148,7 @@ class __TwigTemplate_3c0c8a9d0fb7d8428a01587e4a83466c3f615b39570411fcb0975f1fb6c
                                      data-parent=\"#accordionEx\">
                                     <div class=\"card-body\">
                                         ";
-            // line 71
+            // line 72
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["i"], "idApplication", []), "idApplication", []), "html", null, true);
             echo "
                                     </div>
@@ -173,7 +174,7 @@ class __TwigTemplate_3c0c8a9d0fb7d8428a01587e4a83466c3f615b39570411fcb0975f1fb6c
                                          data-parent=\"#accordionEx\">
                                         <div class=\"card-body\">
                                             ";
-            // line 94
+            // line 95
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["i"], "startDate", [])), "html", null, true);
             echo "
                                         </div>
@@ -200,7 +201,7 @@ class __TwigTemplate_3c0c8a9d0fb7d8428a01587e4a83466c3f615b39570411fcb0975f1fb6c
                                      data-parent=\"#accordionEx\">
                                     <div class=\"card-body\">
                                         ";
-            // line 118
+            // line 119
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["i"], "finishDate", [])), "html", null, true);
             echo "
                                     </div>
@@ -227,7 +228,7 @@ class __TwigTemplate_3c0c8a9d0fb7d8428a01587e4a83466c3f615b39570411fcb0975f1fb6c
                                          data-parent=\"#accordionEx\">
                                         <div class=\"card-body\">
                                             ";
-            // line 142
+            // line 143
             echo twig_escape_filter($this->env, $this->getAttribute($context["i"], "paymentMethod", []), "html", null, true);
             echo "
                                         </div>
@@ -255,7 +256,7 @@ class __TwigTemplate_3c0c8a9d0fb7d8428a01587e4a83466c3f615b39570411fcb0975f1fb6c
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['i'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 164
+        // line 165
         echo "            </div>
         </div>
 
@@ -286,7 +287,7 @@ class __TwigTemplate_3c0c8a9d0fb7d8428a01587e4a83466c3f615b39570411fcb0975f1fb6c
 
     public function getDebugInfo()
     {
-        return array (  259 => 164,  231 => 142,  204 => 118,  177 => 94,  151 => 71,  126 => 49,  101 => 26,  97 => 25,  85 => 16,  78 => 12,  68 => 4,  59 => 3,  41 => 2,  11 => 1,);
+        return array (  260 => 165,  232 => 143,  205 => 119,  178 => 95,  152 => 72,  127 => 50,  101 => 26,  97 => 25,  85 => 16,  78 => 12,  68 => 4,  59 => 3,  41 => 2,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -324,6 +325,7 @@ class __TwigTemplate_3c0c8a9d0fb7d8428a01587e4a83466c3f615b39570411fcb0975f1fb6c
 
     <div class=\"container\">
     {% for i in con %}
+        
         <div class=\"modal-dialog modal-lg\" role=\"document\" style=\"display: inline-block\">
             <div class=\"modal-content\">
                 <div class=\"modal-body\">
