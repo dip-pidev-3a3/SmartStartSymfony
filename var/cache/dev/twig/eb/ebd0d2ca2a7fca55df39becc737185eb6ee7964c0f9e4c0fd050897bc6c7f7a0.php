@@ -162,6 +162,6 @@ class __TwigTemplate_16881cb76f38c47ce89beb8b7801ad052fcb555426f88afcb40f19b8c77
         {% endif %}
     </div>
 {% endblock %}
-", "WebProfilerBundle:Profiler:open.html.twig", "C:\\wamp64\\www\\smartstart\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle/Resources/views/Profiler/open.html.twig");
+", "WebProfilerBundle:Profiler:open.html.twig", "C:\\wamp\\www\\SmartStartSymfony\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle/Resources/views/Profiler/open.html.twig");
     }
 }

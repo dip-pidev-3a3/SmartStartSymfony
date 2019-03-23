@@ -339,6 +339,6 @@ class __TwigTemplate_c6aa62add8a40c0477b7c93d343bc5b6f3d827e495b846cc594b61cee8f
     CKEDITOR.replace('editor1');
 </script>
 {% endblock %}
-", "@Blog/BlogViews/UpdateBlogPost.html.twig", "C:\\wamp64\\www\\smartstart\\src\\BlogBundle\\Resources\\views\\BlogViews\\UpdateBlogPost.html.twig");
+", "@Blog/BlogViews/UpdateBlogPost.html.twig", "C:\\wamp\\www\\SmartStartSymfony\\src\\BlogBundle\\Resources\\views\\BlogViews\\UpdateBlogPost.html.twig");
     }
 }

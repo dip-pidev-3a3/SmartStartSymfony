@@ -114,7 +114,7 @@ class __TwigTemplate_5d727f8fd7999cccc798c8102c0c49343dcdcf5170da4bbd688cdc8d9b2
         </div>
 
         <div class=\"container\">
-            <div class=\"row \">
+            <div class=\"row\">
                 <div class=\"col-md-8 col-lg-9\">
                     <div class=\"p-t-80 p-b-124 bo5-r p-r-50 h-full p-r-0-md bo-none-md\">
                         <!-- Block4 -->
@@ -194,8 +194,10 @@ class __TwigTemplate_5d727f8fd7999cccc798c8102c0c49343dcdcf5170da4bbd688cdc8d9b2
                             </div>
 
 
+
+
                         <p style=\"word-wrap:break-word\">";
-        // line 94
+        // line 96
         echo $this->getAttribute((isset($context["v"]) ? $context["v"] : $this->getContext($context, "v")), "articleContent", []);
         echo " </p>
 
@@ -210,26 +212,26 @@ class __TwigTemplate_5d727f8fd7999cccc798c8102c0c49343dcdcf5170da4bbd688cdc8d9b2
                             <div class=\"text-blo4 p-t-33\" style=\"word-wrap:break-word\">
 
                                 ";
-        // line 106
+        // line 108
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["com"]) ? $context["com"] : $this->getContext($context, "com")));
         foreach ($context['_seq'] as $context["_key"] => $context["comments"]) {
-            // line 107
+            // line 109
             echo "                                    <div class=\"media\" style=\"word-wrap:break-word\">
 
 
                                         <div class=\"media-body\" style=\"word-wrap:break-word\">
                                             <h4 class=\"media-heading\" style=\"font-family: Montserrat-Bold\">";
-            // line 111
+            // line 113
             echo twig_escape_filter($this->env, $this->getAttribute($context["comments"], "commentAuthor", []), "html", null, true);
             echo " <small><i style=\"font-family: Montserrat-SemiBold;font-size: 16px\">";
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["comments"], "commentDate", []), "l jS  F Y h:i:s A"), "html", null, true);
             echo "</i></small> ";
             if (($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", []) != null)) {
-                // line 112
+                // line 114
                 echo "                                                    ";
                 if (($this->getAttribute($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", []), "id", []) == $this->getAttribute($this->getAttribute($context["comments"], "commentAuthor", []), "id", []))) {
-                    // line 113
+                    // line 115
                     echo "                                                        <!-- Modal HTML -->
                                                         <div id=\"myModal\" class=\"modal fade\">
                                                             <div class=\"modal-dialog modal-confirm\">
@@ -247,7 +249,7 @@ class __TwigTemplate_5d727f8fd7999cccc798c8102c0c49343dcdcf5170da4bbd688cdc8d9b2
                                                                     <div class=\"modal-footer\">
                                                                         <button type=\"button\" class=\"btn btn-info\" data-dismiss=\"modal\">Cancel</button>
                                                                         <a href=\"";
-                    // line 129
+                    // line 131
                     echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("blog_deleteComment", ["commentId" => $this->getAttribute($context["comments"], "commentId", [])]), "html", null, true);
                     echo "\" type=\"button\" class=\"btn btn-danger\"><label style=\"color:white;\">Delete</label></a>
                                                                     </div>
@@ -261,13 +263,13 @@ class __TwigTemplate_5d727f8fd7999cccc798c8102c0c49343dcdcf5170da4bbd688cdc8d9b2
                                                         </div>
                                                     ";
                 }
-                // line 140
+                // line 142
                 echo "                                                ";
             }
             echo "</h4>
 
                                                 ";
-            // line 142
+            // line 144
             echo $this->getAttribute($context["comments"], "commentContent", []);
             echo ".
                                         </div>
@@ -281,7 +283,7 @@ class __TwigTemplate_5d727f8fd7999cccc798c8102c0c49343dcdcf5170da4bbd688cdc8d9b2
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['comments'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 150
+        // line 152
         echo "                            </div>
 
                         </div>
@@ -292,9 +294,9 @@ class __TwigTemplate_5d727f8fd7999cccc798c8102c0c49343dcdcf5170da4bbd688cdc8d9b2
 
 
 ";
-        // line 159
+        // line 161
         if (($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", []) != null)) {
-            // line 160
+            // line 162
             echo "                        <!-- Leave a comment -->
 
                             <h4 class=\"txt33 p-b-14\">
@@ -305,7 +307,7 @@ class __TwigTemplate_5d727f8fd7999cccc798c8102c0c49343dcdcf5170da4bbd688cdc8d9b2
 
                             </p>
                             ";
-            // line 169
+            // line 171
             echo             $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_start');
             echo "
 
@@ -313,7 +315,7 @@ class __TwigTemplate_5d727f8fd7999cccc798c8102c0c49343dcdcf5170da4bbd688cdc8d9b2
 
 
                         ";
-            // line 174
+            // line 176
             echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "commentContent", []), 'widget');
             echo "
 
@@ -327,21 +329,21 @@ class __TwigTemplate_5d727f8fd7999cccc798c8102c0c49343dcdcf5170da4bbd688cdc8d9b2
 
 
                         ";
-            // line 185
+            // line 187
             echo             $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
             echo "
                         ";
         }
-        // line 187
+        // line 189
         echo "                        ";
         if (($this->getAttribute((isset($context["app"]) ? $context["app"] : $this->getContext($context, "app")), "user", []) == null)) {
-            // line 188
+            // line 190
             echo "                            <h4 class=\"txt33 p-b-14\">
                                 You must log in to leave a comment !
                             </h4>
                         ";
         }
-        // line 192
+        // line 194
         echo "
                     </div>
                 </div>
@@ -357,41 +359,65 @@ class __TwigTemplate_5d727f8fd7999cccc798c8102c0c49343dcdcf5170da4bbd688cdc8d9b2
                         <!-- Categories -->
                         <div class=\"categories\">
                             <h4 class=\"txt33 bo5-b p-b-35 p-t-58\">
-                                Categories
+                                <a>Categories</a>
                             </h4>
 
                             <ul>
                                 <li class=\"bo5-b p-t-8 p-b-8\">
-                                    <a href=\"#\" class=\"txt27\">
-                                        Cooking recipe
+                                    <a href=\"";
+        // line 214
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("Blog_PostCat", ["cat" => "NewsjackingPost"]);
+        echo "\" class=\"txt27\">
+                                        Newsjacking
                                     </a>
                                 </li>
 
                                 <li class=\"bo5-b p-t-8 p-b-8\">
-                                    <a href=\"#\" class=\"txt27\">
-                                        Delicious foods
+                                    <a href=\"";
+        // line 220
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("Blog_PostCat", ["cat" => "InstructionalPost"]);
+        echo "\" class=\"txt27\">
+                                        Instructional
                                     </a>
                                 </li>
 
                                 <li class=\"bo5-b p-t-8 p-b-8\">
-                                    <a href=\"#\" class=\"txt27\">
-                                        Events Design
+                                    <a href=\"";
+        // line 226
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("Blog_PostCat", ["cat" => "PersonalSpotlightPost"]);
+        echo "\" class=\"txt27\">
+                                        Personal Spotlight
                                     </a>
                                 </li>
 
                                 <li class=\"bo5-b p-t-8 p-b-8\">
-                                    <a href=\"#\" class=\"txt27\">
-                                        Restaurant Place
+                                    <a href=\"";
+        // line 232
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("Blog_PostCat", ["cat" => "CheatSheetPost"]);
+        echo "\" class=\"txt27\">
+                                        Cheat Sheet
                                     </a>
                                 </li>
 
                                 <li class=\"bo5-b p-t-8 p-b-8\">
-                                    <a href=\"#\" class=\"txt27\">
-                                        WordPress
+                                    <a href=\"";
+        // line 238
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("Blog_PostCat", ["cat" => "MediaPost"]);
+        echo "\" class=\"txt27\">
+                                        Media
+                                    </a>
+                                </li>
+                                <li class=\"bo5-b p-t-8 p-b-8\">
+                                    <a href=\"";
+        // line 243
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("Blog_PostCat", ["cat" => "Entertaining"]);
+        echo "\" class=\"txt27\">
+                                        Entertaining
                                     </a>
                                 </li>
                             </ul>
                         </div>
+
 
                         <!-- Most Popular -->
                         <div class=\"popular\">
@@ -400,96 +426,54 @@ class __TwigTemplate_5d727f8fd7999cccc798c8102c0c49343dcdcf5170da4bbd688cdc8d9b2
                             </h4>
 
                             <ul>
-                                <li class=\"flex-w m-b-25\">
-                                    <div class=\"size16 bo-rad-10 wrap-pic-w of-hidden m-r-18\">
-                                        <a href=\"#\">
-                                            <img src=\"images/blog-11.jpg\" alt=\"IMG-BLOG\">
-                                        </a>
-                                    </div>
+                                ";
+        // line 258
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["popular"]) ? $context["popular"] : $this->getContext($context, "popular")));
+        foreach ($context['_seq'] as $context["_key"] => $context["pop"]) {
+            // line 259
+            echo "                                    <li class=\"flex-w m-b-25\">
+                                        <div class=\"size16 bo-rad-10 wrap-pic-w of-hidden m-r-18\">
+                                            <a href=\"";
+            // line 261
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("blog_Detail", ["postId" => $this->getAttribute($context["pop"], "postId", [])]), "html", null, true);
+            echo "\">
+                                                <img src=\"";
+            // line 262
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl(("uploads/images/" . $this->getAttribute($context["pop"], "image", []))), "html", null, true);
+            echo "\" alt=\"IMG-BLOG\">
+                                            </a>
+                                        </div>
 
-                                    <div class=\"size28\">
-                                        <a href=\"#\" class=\"dis-block txt28 m-b-8\">
-                                            Best Places for Wine
-                                        </a>
+                                        <div class=\"size28\">
+                                            <a href=\"";
+            // line 267
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("blog_Detail", ["postId" => $this->getAttribute($context["pop"], "postId", [])]), "html", null, true);
+            echo "\" class=\"dis-block txt28 m-b-8\">
+                                                ";
+            // line 268
+            echo twig_escape_filter($this->env, $this->getAttribute($context["pop"], "articleTitle", []), "html", null, true);
+            echo "
+                                            </a>
 
-                                        <span class=\"txt14\">
-\t\t\t\t\t\t\t\t\t\t\t3 days ago
+                                            <span class=\"txt14\">
+\t\t\t\t\t\t\t\t\t\t\t";
+            // line 272
+            $context["leftDays"] = $this->getAttribute($this->getAttribute($this->getAttribute($context["pop"], "postDate", []), "diff", [0 => twig_date_converter($this->env, "now")], "method"), "format", [0 => "%a"], "method");
+            // line 273
+            echo "                                                ";
+            echo twig_escape_filter($this->env, (isset($context["leftDays"]) ? $context["leftDays"] : $this->getContext($context, "leftDays")), "html", null, true);
+            echo " Days Ago
 \t\t\t\t\t\t\t\t\t\t</span>
-                                    </div>
-                                </li>
-
-                                <li class=\"flex-w m-b-25\">
-                                    <div class=\"size16 bo-rad-10 wrap-pic-w of-hidden m-r-18\">
-                                        <a href=\"#\">
-                                            <img src=\"images/blog-12.jpg\" alt=\"IMG-BLOG\">
-                                        </a>
-                                    </div>
-
-                                    <div class=\"size28\">
-                                        <a href=\"#\" class=\"dis-block txt28 m-b-8\">
-                                            Eggs and Cheese
-                                        </a>
-
-                                        <span class=\"txt14\">
-\t\t\t\t\t\t\t\t\t\t\tJuly 2, 2017
-\t\t\t\t\t\t\t\t\t\t</span>
-                                    </div>
-                                </li>
-
-                                <li class=\"flex-w m-b-25\">
-                                    <div class=\"size16 bo-rad-10 wrap-pic-w of-hidden m-r-18\">
-                                        <a href=\"#\">
-                                            <img src=\"images/blog-13.jpg\" alt=\"IMG-BLOG\">
-                                        </a>
-                                    </div>
-
-                                    <div class=\"size28\">
-                                        <a href=\"#\" class=\"dis-block txt28 m-b-8\">
-                                            Style the Wedding Party
-                                        </a>
-
-                                        <span class=\"txt14\">
-\t\t\t\t\t\t\t\t\t\t\tMay 28, 2017
-\t\t\t\t\t\t\t\t\t\t</span>
-                                    </div>
-                                </li>
-
-                                <li class=\"flex-w m-b-25\">
-                                    <div class=\"size16 bo-rad-10 wrap-pic-w of-hidden m-r-18\">
-                                        <a href=\"#\">
-                                            <img src=\"images/blog-14.jpg\" alt=\"IMG-BLOG\">
-                                        </a>
-                                    </div>
-
-                                    <div class=\"size28\">
-                                        <a href=\"#\" class=\"dis-block txt28 m-b-8\">
-                                            Cooking recipe Delicious
-                                        </a>
-
-                                        <span class=\"txt14\">
-\t\t\t\t\t\t\t\t\t\t\tMay 25, 2017
-\t\t\t\t\t\t\t\t\t\t</span>
-                                    </div>
-                                </li>
-
-                                <li class=\"flex-w m-b-25\">
-                                    <div class=\"size16 bo-rad-10 wrap-pic-w of-hidden m-r-18\">
-                                        <a href=\"#\">
-                                            <img src=\"images/blog-15.jpg\" alt=\"IMG-BLOG\">
-                                        </a>
-                                    </div>
-
-                                    <div class=\"size28\">
-                                        <a href=\"#\" class=\"dis-block txt28 m-b-8\">
-                                            Pizza is prepared fresh
-                                        </a>
-
-                                        <span class=\"txt14\">
-\t\t\t\t\t\t\t\t\t\t\tMay 2, 2017
-\t\t\t\t\t\t\t\t\t\t</span>
-                                    </div>
-                                </li>
-                            </ul>
+                                        </div>
+                                    </li>
+                                ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['pop'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 278
+        echo "                            </ul>
                         </div>
 
 
@@ -610,7 +594,7 @@ class __TwigTemplate_5d727f8fd7999cccc798c8102c0c49343dcdcf5170da4bbd688cdc8d9b2
 
     public function getDebugInfo()
     {
-        return array (  345 => 192,  339 => 188,  336 => 187,  331 => 185,  317 => 174,  309 => 169,  298 => 160,  296 => 159,  285 => 150,  271 => 142,  265 => 140,  251 => 129,  233 => 113,  230 => 112,  224 => 111,  218 => 107,  214 => 106,  199 => 94,  188 => 86,  180 => 81,  172 => 76,  164 => 71,  156 => 66,  152 => 65,  140 => 56,  127 => 46,  110 => 32,  102 => 27,  94 => 22,  85 => 16,  71 => 5,  68 => 4,  59 => 3,  41 => 2,  11 => 1,);
+        return array (  476 => 278,  464 => 273,  462 => 272,  455 => 268,  451 => 267,  443 => 262,  439 => 261,  435 => 259,  431 => 258,  413 => 243,  405 => 238,  396 => 232,  387 => 226,  378 => 220,  369 => 214,  347 => 194,  341 => 190,  338 => 189,  333 => 187,  319 => 176,  311 => 171,  300 => 162,  298 => 161,  287 => 152,  273 => 144,  267 => 142,  253 => 131,  235 => 115,  232 => 114,  226 => 113,  220 => 109,  216 => 108,  201 => 96,  188 => 86,  180 => 81,  172 => 76,  164 => 71,  156 => 66,  152 => 65,  140 => 56,  127 => 46,  110 => 32,  102 => 27,  94 => 22,  85 => 16,  71 => 5,  68 => 4,  59 => 3,  41 => 2,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -660,7 +644,7 @@ class __TwigTemplate_5d727f8fd7999cccc798c8102c0c49343dcdcf5170da4bbd688cdc8d9b2
         </div>
 
         <div class=\"container\">
-            <div class=\"row \">
+            <div class=\"row\">
                 <div class=\"col-md-8 col-lg-9\">
                     <div class=\"p-t-80 p-b-124 bo5-r p-r-50 h-full p-r-0-md bo-none-md\">
                         <!-- Block4 -->
@@ -714,6 +698,8 @@ class __TwigTemplate_5d727f8fd7999cccc798c8102c0c49343dcdcf5170da4bbd688cdc8d9b2
 
 
                             </div>
+
+
 
 
                         <p style=\"word-wrap:break-word\">{{ v.articleContent|raw }} </p>
@@ -829,41 +815,47 @@ class __TwigTemplate_5d727f8fd7999cccc798c8102c0c49343dcdcf5170da4bbd688cdc8d9b2
                         <!-- Categories -->
                         <div class=\"categories\">
                             <h4 class=\"txt33 bo5-b p-b-35 p-t-58\">
-                                Categories
+                                <a>Categories</a>
                             </h4>
 
                             <ul>
                                 <li class=\"bo5-b p-t-8 p-b-8\">
-                                    <a href=\"#\" class=\"txt27\">
-                                        Cooking recipe
+                                    <a href=\"{{ path('Blog_PostCat',{('cat'):('NewsjackingPost')}) }}\" class=\"txt27\">
+                                        Newsjacking
                                     </a>
                                 </li>
 
                                 <li class=\"bo5-b p-t-8 p-b-8\">
-                                    <a href=\"#\" class=\"txt27\">
-                                        Delicious foods
+                                    <a href=\"{{ path('Blog_PostCat',{('cat'):('InstructionalPost')}) }}\" class=\"txt27\">
+                                        Instructional
                                     </a>
                                 </li>
 
                                 <li class=\"bo5-b p-t-8 p-b-8\">
-                                    <a href=\"#\" class=\"txt27\">
-                                        Events Design
+                                    <a href=\"{{ path('Blog_PostCat',{('cat'):('PersonalSpotlightPost')}) }}\" class=\"txt27\">
+                                        Personal Spotlight
                                     </a>
                                 </li>
 
                                 <li class=\"bo5-b p-t-8 p-b-8\">
-                                    <a href=\"#\" class=\"txt27\">
-                                        Restaurant Place
+                                    <a href=\"{{ path('Blog_PostCat',{('cat'):('CheatSheetPost')}) }}\" class=\"txt27\">
+                                        Cheat Sheet
                                     </a>
                                 </li>
 
                                 <li class=\"bo5-b p-t-8 p-b-8\">
-                                    <a href=\"#\" class=\"txt27\">
-                                        WordPress
+                                    <a href=\"{{ path('Blog_PostCat',{('cat'):('MediaPost')}) }}\" class=\"txt27\">
+                                        Media
+                                    </a>
+                                </li>
+                                <li class=\"bo5-b p-t-8 p-b-8\">
+                                    <a href=\"{{ path('Blog_PostCat',{('cat'):('Entertaining')}) }}\" class=\"txt27\">
+                                        Entertaining
                                     </a>
                                 </li>
                             </ul>
                         </div>
+
 
                         <!-- Most Popular -->
                         <div class=\"popular\">
@@ -872,95 +864,26 @@ class __TwigTemplate_5d727f8fd7999cccc798c8102c0c49343dcdcf5170da4bbd688cdc8d9b2
                             </h4>
 
                             <ul>
-                                <li class=\"flex-w m-b-25\">
-                                    <div class=\"size16 bo-rad-10 wrap-pic-w of-hidden m-r-18\">
-                                        <a href=\"#\">
-                                            <img src=\"images/blog-11.jpg\" alt=\"IMG-BLOG\">
-                                        </a>
-                                    </div>
+                                {% for pop in popular %}
+                                    <li class=\"flex-w m-b-25\">
+                                        <div class=\"size16 bo-rad-10 wrap-pic-w of-hidden m-r-18\">
+                                            <a href=\"{{ path('blog_Detail',{('postId'):pop.postId}) }}\">
+                                                <img src=\"{{ asset('uploads/images/' ~ pop.image) }}\" alt=\"IMG-BLOG\">
+                                            </a>
+                                        </div>
 
-                                    <div class=\"size28\">
-                                        <a href=\"#\" class=\"dis-block txt28 m-b-8\">
-                                            Best Places for Wine
-                                        </a>
+                                        <div class=\"size28\">
+                                            <a href=\"{{ path('blog_Detail',{('postId'):pop.postId}) }}\" class=\"dis-block txt28 m-b-8\">
+                                                {{ pop.articleTitle }}
+                                            </a>
 
-                                        <span class=\"txt14\">
-\t\t\t\t\t\t\t\t\t\t\t3 days ago
+                                            <span class=\"txt14\">
+\t\t\t\t\t\t\t\t\t\t\t{% set leftDays = pop.postDate.diff( date(\"now\") ).format('%a') %}
+                                                {{ leftDays }} Days Ago
 \t\t\t\t\t\t\t\t\t\t</span>
-                                    </div>
-                                </li>
-
-                                <li class=\"flex-w m-b-25\">
-                                    <div class=\"size16 bo-rad-10 wrap-pic-w of-hidden m-r-18\">
-                                        <a href=\"#\">
-                                            <img src=\"images/blog-12.jpg\" alt=\"IMG-BLOG\">
-                                        </a>
-                                    </div>
-
-                                    <div class=\"size28\">
-                                        <a href=\"#\" class=\"dis-block txt28 m-b-8\">
-                                            Eggs and Cheese
-                                        </a>
-
-                                        <span class=\"txt14\">
-\t\t\t\t\t\t\t\t\t\t\tJuly 2, 2017
-\t\t\t\t\t\t\t\t\t\t</span>
-                                    </div>
-                                </li>
-
-                                <li class=\"flex-w m-b-25\">
-                                    <div class=\"size16 bo-rad-10 wrap-pic-w of-hidden m-r-18\">
-                                        <a href=\"#\">
-                                            <img src=\"images/blog-13.jpg\" alt=\"IMG-BLOG\">
-                                        </a>
-                                    </div>
-
-                                    <div class=\"size28\">
-                                        <a href=\"#\" class=\"dis-block txt28 m-b-8\">
-                                            Style the Wedding Party
-                                        </a>
-
-                                        <span class=\"txt14\">
-\t\t\t\t\t\t\t\t\t\t\tMay 28, 2017
-\t\t\t\t\t\t\t\t\t\t</span>
-                                    </div>
-                                </li>
-
-                                <li class=\"flex-w m-b-25\">
-                                    <div class=\"size16 bo-rad-10 wrap-pic-w of-hidden m-r-18\">
-                                        <a href=\"#\">
-                                            <img src=\"images/blog-14.jpg\" alt=\"IMG-BLOG\">
-                                        </a>
-                                    </div>
-
-                                    <div class=\"size28\">
-                                        <a href=\"#\" class=\"dis-block txt28 m-b-8\">
-                                            Cooking recipe Delicious
-                                        </a>
-
-                                        <span class=\"txt14\">
-\t\t\t\t\t\t\t\t\t\t\tMay 25, 2017
-\t\t\t\t\t\t\t\t\t\t</span>
-                                    </div>
-                                </li>
-
-                                <li class=\"flex-w m-b-25\">
-                                    <div class=\"size16 bo-rad-10 wrap-pic-w of-hidden m-r-18\">
-                                        <a href=\"#\">
-                                            <img src=\"images/blog-15.jpg\" alt=\"IMG-BLOG\">
-                                        </a>
-                                    </div>
-
-                                    <div class=\"size28\">
-                                        <a href=\"#\" class=\"dis-block txt28 m-b-8\">
-                                            Pizza is prepared fresh
-                                        </a>
-
-                                        <span class=\"txt14\">
-\t\t\t\t\t\t\t\t\t\t\tMay 2, 2017
-\t\t\t\t\t\t\t\t\t\t</span>
-                                    </div>
-                                </li>
+                                        </div>
+                                    </li>
+                                {% endfor %}
                             </ul>
                         </div>
 
@@ -1062,6 +985,6 @@ class __TwigTemplate_5d727f8fd7999cccc798c8102c0c49343dcdcf5170da4bbd688cdc8d9b2
     CKEDITOR.replace('editor1');
 </script>
 {% endblock %}
-", "BlogBundle:BlogViews:DetailBlog.html.twig", "C:\\wamp64\\www\\smartstart\\src\\BlogBundle/Resources/views/BlogViews/DetailBlog.html.twig");
+", "BlogBundle:BlogViews:DetailBlog.html.twig", "C:\\wamp\\www\\SmartStartSymfony\\src\\BlogBundle/Resources/views/BlogViews/DetailBlog.html.twig");
     }
 }

@@ -99,6 +99,6 @@ class __TwigTemplate_afbf2fb6eccfab9a4f3d22d1bbc2354fd6f8d39af95b35700d84e0e4349
 </center>
 </body>
 </head>
-</html>", "@Blog/BlogViews/AddComment.html.twig", "C:\\wamp64\\www\\smartstart\\src\\BlogBundle\\Resources\\views\\BlogViews\\AddComment.html.twig");
+</html>", "@Blog/BlogViews/AddComment.html.twig", "C:\\wamp\\www\\SmartStartSymfony\\src\\BlogBundle\\Resources\\views\\BlogViews\\AddComment.html.twig");
     }
 }

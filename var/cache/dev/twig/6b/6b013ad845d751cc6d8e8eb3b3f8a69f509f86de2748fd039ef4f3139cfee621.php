@@ -161,6 +161,6 @@ class __TwigTemplate_06f2a23f7bc1b6110dc96ce178361d1641828f42ea5e6ab0467f48ac359
         {%- endfor -%}
     </pre>
 {% endif %}
-", "DoctrineBundle:Collector:explain.html.twig", "C:\\wamp64\\www\\smartstart\\vendor\\doctrine\\doctrine-bundle/Resources/views/Collector/explain.html.twig");
+", "DoctrineBundle:Collector:explain.html.twig", "C:\\wamp\\www\\SmartStartSymfony\\vendor\\doctrine\\doctrine-bundle/Resources/views/Collector/explain.html.twig");
     }
 }

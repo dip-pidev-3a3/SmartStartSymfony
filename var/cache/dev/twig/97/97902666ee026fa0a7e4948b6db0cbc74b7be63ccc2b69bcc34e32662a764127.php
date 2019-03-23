@@ -83,6 +83,6 @@ class __TwigTemplate_00b754628f80f056dc97e381e55e0419106edb975bcc7ad9824bb315c2a
         <input type=\"submit\" value=\"{{ 'registration.submit'|trans }}\" />
     </div>
 {{ form_end(form) }}
-", "FOSUserBundle:Registration:register_content.html.twig", "C:\\wamp64\\www\\smartstart\\vendor\\friendsofsymfony\\user-bundle/Resources/views/Registration/register_content.html.twig");
+", "FOSUserBundle:Registration:register_content.html.twig", "C:\\wamp\\www\\SmartStartSymfony\\vendor\\friendsofsymfony\\user-bundle/Resources/views/Registration/register_content.html.twig");
     }
 }

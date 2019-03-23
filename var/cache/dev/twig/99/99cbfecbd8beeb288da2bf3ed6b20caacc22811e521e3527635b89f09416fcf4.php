@@ -85,6 +85,6 @@ class __TwigTemplate_e0ac0879247aacbb61c6b85e69edc2264280919af259ececa335005f839
 {% block fos_user_content %}
 {% include \"@FOSUser/Profile/edit_content.html.twig\" %}
 {% endblock fos_user_content %}
-", "FOSUserBundle:Profile:edit.html.twig", "C:\\wamp64\\www\\smartstart\\vendor\\friendsofsymfony\\user-bundle/Resources/views/Profile/edit.html.twig");
+", "FOSUserBundle:Profile:edit.html.twig", "C:\\wamp\\www\\SmartStartSymfony\\vendor\\friendsofsymfony\\user-bundle/Resources/views/Profile/edit.html.twig");
     }
 }

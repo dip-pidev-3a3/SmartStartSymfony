@@ -141,6 +141,6 @@ class __TwigTemplate_cace6aefa6866733c2fad99e9743c5d2753c698ab53582798aebf3b4844
     <div class=\"footer\"><a href=\"#\">Forgot your password?</a></div>
 
 </form>
-", "@FOSUser/Security/login_content.html.twig", "C:\\wamp64\\www\\smartstart\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\Security\\login_content.html.twig");
+", "@FOSUser/Security/login_content.html.twig", "C:\\wamp\\www\\SmartStartSymfony\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\Security\\login_content.html.twig");
     }
 }

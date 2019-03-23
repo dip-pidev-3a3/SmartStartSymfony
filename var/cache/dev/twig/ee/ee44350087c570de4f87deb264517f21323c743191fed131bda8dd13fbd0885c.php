@@ -88,6 +88,6 @@ class __TwigTemplate_efa4d5b31510dd65636b14a07865ad8a1179cbcce1d5b7f6f438ce7af2a
 {% block fos_user_content %}
     {{ include('@FOSUser/Security/login_content.html.twig') }}
 {% endblock fos_user_content %}
-", "@FOSUser/Security/login.html.twig", "C:\\wamp\\www\\SmartStartSymfony-master\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\Security\\login.html.twig");
+", "@FOSUser/Security/login.html.twig", "C:\\wamp\\www\\SmartStartSymfony\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\Security\\login.html.twig");
     }
 }

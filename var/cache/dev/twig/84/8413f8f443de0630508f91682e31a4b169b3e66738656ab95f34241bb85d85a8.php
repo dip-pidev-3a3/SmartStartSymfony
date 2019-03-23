@@ -171,6 +171,6 @@ class __TwigTemplate_ab7eed74d88e7e3e615604308cef445cbffe22ab3bccaea34d7aaebf347
         </div>
     </div>
 </div>
-", "@Twig/Exception/traces.html.twig", "C:\\wamp\\www\\SmartStartSymfony-master\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle\\Resources\\views\\Exception\\traces.html.twig");
+", "@Twig/Exception/traces.html.twig", "C:\\wamp\\www\\SmartStartSymfony\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle\\Resources\\views\\Exception\\traces.html.twig");
     }
 }

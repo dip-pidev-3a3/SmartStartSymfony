@@ -85,6 +85,6 @@ class __TwigTemplate_632a459538788991dd0b9d9db3b2d4895b10eb79c084563127859d5fe60
 {% block fos_user_content %}
 {% include \"@FOSUser/Resetting/request_content.html.twig\" %}
 {% endblock fos_user_content %}
-", "@FOSUser/Resetting/request.html.twig", "C:\\wamp64\\www\\smartstart\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\Resetting\\request.html.twig");
+", "@FOSUser/Resetting/request.html.twig", "C:\\wamp\\www\\SmartStartSymfony\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\Resetting\\request.html.twig");
     }
 }

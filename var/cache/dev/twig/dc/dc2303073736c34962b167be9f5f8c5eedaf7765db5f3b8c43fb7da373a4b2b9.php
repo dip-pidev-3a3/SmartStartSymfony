@@ -53,6 +53,6 @@ class __TwigTemplate_02bb18bc9c0f4acd52678591bdd352d2ce30581ca1034ef2f73b035b4ef
     public function getSourceContext()
     {
         return new Twig_Source("Hello World!
-", "BlogBundle:Default:index.html.twig", "C:\\wamp64\\www\\smartstart\\src\\BlogBundle/Resources/views/Default/index.html.twig");
+", "BlogBundle:Default:index.html.twig", "C:\\wamp\\www\\SmartStartSymfony\\src\\BlogBundle/Resources/views/Default/index.html.twig");
     }
 }

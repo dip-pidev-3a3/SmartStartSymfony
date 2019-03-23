@@ -131,6 +131,6 @@ class __TwigTemplate_126ed829176d3e3cfe29d09c850f3adc184b6961bdb1eb3c8c6b19bdc42
 {% endautoescape %}
 {% endblock %}
 {% block body_html %}{% endblock %}
-", "FOSUserBundle:Resetting:email.txt.twig", "C:\\wamp64\\www\\smartstart\\vendor\\friendsofsymfony\\user-bundle/Resources/views/Resetting/email.txt.twig");
+", "FOSUserBundle:Resetting:email.txt.twig", "C:\\wamp\\www\\SmartStartSymfony\\vendor\\friendsofsymfony\\user-bundle/Resources/views/Resetting/email.txt.twig");
     }
 }

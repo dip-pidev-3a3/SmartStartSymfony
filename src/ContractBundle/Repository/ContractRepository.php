@@ -17,13 +17,11 @@ class ContractRepository extends EntityRepository
     public function getMyContracts($id){
         return $this->getEntityManager()
             ->createQuery(
-                'SELECT * FROM AppBundle:contract c,AppBundle:application a,AppBundle:opportunity o WHERE ((c.id_application = a.id_application) AND (a.id_opportunity = o.id_opp) AND (o.id_entreprise = :val))'
+                'SELECT c FROM AppBundle:contract c,AppBundle:application a,AppBundle:opportunity o WHERE ((c.idApplication = a.idApplication) AND (a.idOpportunity = o.idOpp) AND (o.idEntreprise = :val) AND (c.prio = 1))'
             )
             ->setParameter('val', $id)
             ->getResult();
 
     }
-
-
 
 }

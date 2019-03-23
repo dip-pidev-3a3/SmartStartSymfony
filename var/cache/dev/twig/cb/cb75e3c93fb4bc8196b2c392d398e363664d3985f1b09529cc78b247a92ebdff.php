@@ -85,6 +85,6 @@ class __TwigTemplate_8bc2190fea500665e6b4e8324ebee34f0b39681dcf9fdcd4e398b655094
 {% block fos_user_content %}
 {% include \"@FOSUser/Group/show_content.html.twig\" %}
 {% endblock fos_user_content %}
-", "@FOSUser/Group/show.html.twig", "C:\\wamp64\\www\\smartstart\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\Group\\show.html.twig");
+", "@FOSUser/Group/show.html.twig", "C:\\wamp\\www\\SmartStartSymfony\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\Group\\show.html.twig");
     }
 }

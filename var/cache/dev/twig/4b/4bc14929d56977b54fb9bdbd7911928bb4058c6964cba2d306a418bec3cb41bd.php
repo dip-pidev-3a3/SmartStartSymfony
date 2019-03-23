@@ -90,6 +90,6 @@ class __TwigTemplate_d74f5f6b3ed94e19e6740d11dd08ae559994c9079371ca21e19c28210df
 {% block fos_user_content %}
     <p>{{ 'registration.check_email'|trans({'%email%': user.email}) }}</p>
 {% endblock fos_user_content %}
-", "@FOSUser/Registration/check_email.html.twig", "C:\\wamp64\\www\\smartstart\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\Registration\\check_email.html.twig");
+", "@FOSUser/Registration/check_email.html.twig", "C:\\wamp\\www\\SmartStartSymfony\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\Registration\\check_email.html.twig");
     }
 }

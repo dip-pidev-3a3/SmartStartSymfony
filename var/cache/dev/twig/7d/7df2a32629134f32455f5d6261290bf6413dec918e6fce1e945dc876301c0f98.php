@@ -421,6 +421,6 @@ class __TwigTemplate_7b4f9bb345e98c504d3daaf83a4e9edef7fd6da3f8c00d8aed40a012d7d
     });
 
 /*]]>*/</script>
-", "TwigBundle::base_js.html.twig", "C:\\wamp64\\www\\smartstart\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle/Resources/views/base_js.html.twig");
+", "TwigBundle::base_js.html.twig", "C:\\wamp\\www\\SmartStartSymfony\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle/Resources/views/base_js.html.twig");
     }
 }

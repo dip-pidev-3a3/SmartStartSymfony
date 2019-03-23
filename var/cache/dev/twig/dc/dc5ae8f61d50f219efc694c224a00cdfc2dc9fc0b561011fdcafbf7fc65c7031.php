@@ -60,36 +60,42 @@ class __TwigTemplate_10f7d023ff40be37b38b4c5f41a295a76a01f1e64bbb03139486300dc61
 
 
 </head>
-
-
-<body background=\"";
+<style type=\"text/css\">
+body{
+background-image: image(";
         // line 23
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("fosassets/background.jpg"), "html", null, true);
-        echo "\">
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("fosassets/background1.jpg"), "html", null, true);
+        echo ");
+background: midnightblue;
+font-family: 'Roboto', sans-serif;
+}
+</style>
+
+<body background=\"/fosassets/background.jpg\">
 
 
 <!-- Mixins-->
 <!-- Pen Title-->
 ";
-        // line 28
+        // line 34
         $this->displayBlock('content', $context, $blocks);
-        // line 84
+        // line 90
         echo "<!-- Portfolio--><a id=\"portfolio\" href=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("http://andytran.me/"), "html", null, true);
         echo "\" title=\"View my portfolio!\"><i class=\"fa fa-link\"></i></a>
 <!-- CodePen--><a id=\"codepen\" href=\"";
-        // line 85
+        // line 91
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("https://codepen.io/andytran/"), "html", null, true);
         echo "\" title=\"Follow me!\"><i class=\"fa fa-codepen\"></i></a>
 <script src=\"";
-        // line 86
+        // line 92
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"), "html", null, true);
         echo "\"></script>
 
 
 
 <script src=\"";
-        // line 90
+        // line 96
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("fosassets/js/index.js"), "html", null, true);
         echo "\"></script>
 
@@ -125,7 +131,7 @@ class __TwigTemplate_10f7d023ff40be37b38b4c5f41a295a76a01f1e64bbb03139486300dc61
 
     }
 
-    // line 28
+    // line 34
     public function block_content($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -134,7 +140,7 @@ class __TwigTemplate_10f7d023ff40be37b38b4c5f41a295a76a01f1e64bbb03139486300dc61
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
-        // line 29
+        // line 35
         echo "<div class=\"pen-title\">
 </div>
 <div class=\"container\">
@@ -143,9 +149,9 @@ class __TwigTemplate_10f7d023ff40be37b38b4c5f41a295a76a01f1e64bbb03139486300dc61
         <h1 class=\"title\">Login</h1>
 
         ";
-        // line 36
+        // line 42
         $this->displayBlock('fos_user_content', $context, $blocks);
-        // line 55
+        // line 61
         echo "    </div>
     <div class=\"card alt\">
         <div class=\"toggle\"></div>
@@ -183,7 +189,7 @@ class __TwigTemplate_10f7d023ff40be37b38b4c5f41a295a76a01f1e64bbb03139486300dc61
 
     }
 
-    // line 36
+    // line 42
     public function block_fos_user_content($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
@@ -192,7 +198,7 @@ class __TwigTemplate_10f7d023ff40be37b38b4c5f41a295a76a01f1e64bbb03139486300dc61
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "fos_user_content"));
 
-        // line 37
+        // line 43
         echo "
         <form>
             <div class=\"input-container\">
@@ -231,7 +237,7 @@ class __TwigTemplate_10f7d023ff40be37b38b4c5f41a295a76a01f1e64bbb03139486300dc61
 
     public function getDebugInfo()
     {
-        return array (  196 => 37,  187 => 36,  149 => 55,  147 => 36,  138 => 29,  129 => 28,  112 => 6,  93 => 90,  86 => 86,  82 => 85,  77 => 84,  75 => 28,  67 => 23,  58 => 17,  53 => 15,  49 => 14,  44 => 12,  37 => 7,  35 => 6,  28 => 1,);
+        return array (  202 => 43,  193 => 42,  155 => 61,  153 => 42,  144 => 35,  135 => 34,  118 => 6,  99 => 96,  92 => 92,  88 => 91,  83 => 90,  81 => 34,  67 => 23,  58 => 17,  53 => 15,  49 => 14,  44 => 12,  37 => 7,  35 => 6,  28 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -264,9 +270,15 @@ class __TwigTemplate_10f7d023ff40be37b38b4c5f41a295a76a01f1e64bbb03139486300dc61
 
 
 </head>
+<style type=\"text/css\">
+body{
+background-image: image({{ asset('fosassets/background1.jpg') }});
+background: midnightblue;
+font-family: 'Roboto', sans-serif;
+}
+</style>
 
-
-<body background=\"{{ asset('fosassets/background.jpg') }}\">
+<body background=\"/fosassets/background.jpg\">
 
 
 <!-- Mixins-->
@@ -341,6 +353,6 @@ class __TwigTemplate_10f7d023ff40be37b38b4c5f41a295a76a01f1e64bbb03139486300dc61
 </body>
 
 </html>
-", "FOSUserBundle::layout.html.twig", "C:\\wamp64\\www\\smartstart\\vendor\\friendsofsymfony\\user-bundle/Resources/views/layout.html.twig");
+", "FOSUserBundle::layout.html.twig", "C:\\wamp\\www\\SmartStartSymfony\\vendor\\friendsofsymfony\\user-bundle/Resources/views/layout.html.twig");
     }
 }

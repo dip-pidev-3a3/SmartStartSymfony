@@ -478,6 +478,6 @@ class __TwigTemplate_aebe948629f3ba5712ec399021fc6bfc2b257da29e112f89bd2cff50ac2
         {% endif %}
     </div>
 </div>
-", "TwigBundle:Exception:exception.html.twig", "C:\\wamp64\\www\\smartstart\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle/Resources/views/Exception/exception.html.twig");
+", "TwigBundle:Exception:exception.html.twig", "C:\\wamp\\www\\SmartStartSymfony\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle/Resources/views/Exception/exception.html.twig");
     }
 }

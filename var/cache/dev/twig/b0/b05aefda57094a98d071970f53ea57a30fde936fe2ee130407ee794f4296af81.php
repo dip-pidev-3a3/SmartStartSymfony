@@ -217,6 +217,6 @@ class __TwigTemplate_5abcd513a35c687d09e19643b7da87605882551506b85d6815e7c3b1f03
         </div>
     </form>
 </div>
-", "@WebProfiler/Profiler/search.html.twig", "C:\\wamp64\\www\\smartstart\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Profiler\\search.html.twig");
+", "@WebProfiler/Profiler/search.html.twig", "C:\\wamp\\www\\SmartStartSymfony\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Profiler\\search.html.twig");
     }
 }

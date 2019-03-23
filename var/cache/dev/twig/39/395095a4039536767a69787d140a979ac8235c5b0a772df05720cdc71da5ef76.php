@@ -93,6 +93,6 @@ class __TwigTemplate_dd7421a109b3d32ddd8b8ee8ece04a983cbe30e1fb11af9454e69a646fa
 </center>
 </body>
 </head>
-</html>", "BlogBundle:BlogViews:AddBlogPost.html.twig", "C:\\wamp64\\www\\smartstart\\src\\BlogBundle/Resources/views/BlogViews/AddBlogPost.html.twig");
+</html>", "BlogBundle:BlogViews:AddBlogPost.html.twig", "C:\\wamp\\www\\SmartStartSymfony\\src\\BlogBundle/Resources/views/BlogViews/AddBlogPost.html.twig");
     }
 }

@@ -211,6 +211,6 @@ class __TwigTemplate_54c3dbbaed98ab905ed0d5e9e2fb083504beb2727ce371243c36253afc9
         {% endif %}
     </ul>
 {% endif %}
-", "@TilowebPagination/pagination.html.twig", "C:\\wamp64\\www\\smartstart\\vendor\\tiloweb\\pagination-bundle\\Tiloweb\\PaginationBundle\\Resources\\views\\pagination.html.twig");
+", "@TilowebPagination/pagination.html.twig", "C:\\wamp\\www\\SmartStartSymfony\\vendor\\tiloweb\\pagination-bundle\\Tiloweb\\PaginationBundle\\Resources\\views\\pagination.html.twig");
     }
 }

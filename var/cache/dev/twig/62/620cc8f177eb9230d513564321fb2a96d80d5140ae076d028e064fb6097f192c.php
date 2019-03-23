@@ -83,6 +83,6 @@ class __TwigTemplate_7798bcc508af59a9505ef00ae4820e2bcb5b71e9680e1144e7b752a479e
         <input type=\"submit\" value=\"{{ 'resetting.reset.submit'|trans }}\" />
     </div>
 {{ form_end(form) }}
-", "FOSUserBundle:Resetting:reset_content.html.twig", "C:\\wamp64\\www\\smartstart\\vendor\\friendsofsymfony\\user-bundle/Resources/views/Resetting/reset_content.html.twig");
+", "FOSUserBundle:Resetting:reset_content.html.twig", "C:\\wamp\\www\\SmartStartSymfony\\vendor\\friendsofsymfony\\user-bundle/Resources/views/Resetting/reset_content.html.twig");
     }
 }

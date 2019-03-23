@@ -353,6 +353,6 @@ font-family: 'Roboto', sans-serif;
 </body>
 
 </html>
-", "@FOSUser/layout.html.twig", "C:\\wamp\\www\\SmartStartSymfony-master\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\layout.html.twig");
+", "@FOSUser/layout.html.twig", "C:\\wamp\\www\\SmartStartSymfony\\vendor\\friendsofsymfony\\user-bundle\\Resources\\views\\layout.html.twig");
     }
 }

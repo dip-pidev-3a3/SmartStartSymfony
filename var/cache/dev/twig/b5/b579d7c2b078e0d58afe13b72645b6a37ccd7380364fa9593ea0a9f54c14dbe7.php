@@ -144,6 +144,6 @@ class __TwigTemplate_312104de780cb257d4c6a5c2d667bae193f546db6c00d1d8e62fc628aa8
         {% block body '' %}
     </body>
 </html>
-", "WebProfilerBundle:Profiler:base.html.twig", "C:\\wamp64\\www\\smartstart\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle/Resources/views/Profiler/base.html.twig");
+", "WebProfilerBundle:Profiler:base.html.twig", "C:\\wamp\\www\\SmartStartSymfony\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle/Resources/views/Profiler/base.html.twig");
     }
 }

@@ -168,6 +168,6 @@ class __TwigTemplate_0067e53ceb805430763602660a149d42158b829869092d47d2e468465e9
         {% block javascripts %}{% endblock %}
     </body>
 </html>
-", "::base.html.twig", "C:\\wamp64\\www\\smartstart\\app/Resources\\views/base.html.twig");
+", "::base.html.twig", "C:\\wamp\\www\\SmartStartSymfony\\app/Resources\\views/base.html.twig");
     }
 }
