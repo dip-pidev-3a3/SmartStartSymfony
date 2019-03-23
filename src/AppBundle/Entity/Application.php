@@ -49,5 +49,16 @@ class Application
     private $idFreelancer;
 
 
+    /**
+     * Get idApplication
+     *
+     * @return integer
+     */
+    public function getIdApplication()
+    {
+        return $this->idApplication;
+    }
+
+
 }
 
