@@ -820,6 +820,6 @@ class __TwigTemplate_67e46e0788a39a5d75dd3e5e8ee91401ec694da4b74ede46208d48b8292
         </div>
     </section>
 
-{% endblock %}", "OpportunityBundle:Default:detailblog.html.twig", "C:\\wamp64\\www\\smartstart\\src\\OpportunityBundle/Resources/views/Default/detailblog.html.twig");
+{% endblock %}", "OpportunityBundle:Default:detailblog.html.twig", "C:\\wamp\\www\\SmartStartSymfony\\src\\OpportunityBundle/Resources/views/Default/detailblog.html.twig");
     }
 }

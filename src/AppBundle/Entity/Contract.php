@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Contract
  *
  * @ORM\Table(name="contract", indexes={@ORM\Index(name="id_application", columns={"id_application"})})
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="ContractBundle\Repository\ContractRepository")
  */
 class Contract
 {
@@ -65,6 +65,160 @@ class Contract
      * })
      */
     private $idApplication;
+
+    /**
+     * Get idContract
+     *
+     * @return integer
+     */
+    public function getIdContract()
+    {
+        return $this->idContract;
+    }
+
+    /**
+     * Set paymentMethod
+     *
+     * @param string $paymentMethod
+     *
+     * @return Contract
+     */
+    public function setPaymentMethod($paymentMethod)
+    {
+        $this->paymentMethod = $paymentMethod;
+
+        return $this;
+    }
+
+    /**
+     * Get paymentMethod
+     *
+     * @return string
+     */
+    public function getPaymentMethod()
+    {
+        return $this->paymentMethod;
+    }
+
+    /**
+     * Set startDate
+     *
+     * @param \DateTime $startDate
+     *
+     * @return Contract
+     */
+    public function setStartDate($startDate)
+    {
+        $this->startDate = $startDate;
+
+        return $this;
+    }
+
+    /**
+     * Get startDate
+     *
+     * @return \DateTime
+     */
+    public function getStartDate()
+    {
+        return $this->startDate;
+    }
+
+    /**
+     * Set finishDate
+     *
+     * @param \DateTime $finishDate
+     *
+     * @return Contract
+     */
+    public function setFinishDate($finishDate)
+    {
+        $this->finishDate = $finishDate;
+
+        return $this;
+    }
+
+    /**
+     * Get finishDate
+     *
+     * @return \DateTime
+     */
+    public function getFinishDate()
+    {
+        return $this->finishDate;
+    }
+
+    /**
+     * Set sum
+     *
+     * @param float $sum
+     *
+     * @return Contract
+     */
+    public function setSum($sum)
+    {
+        $this->sum = $sum;
+
+        return $this;
+    }
+
+    /**
+     * Get sum
+     *
+     * @return float
+     */
+    public function getSum()
+    {
+        return $this->sum;
+    }
+
+    /**
+     * Set prio
+     *
+     * @param integer $prio
+     *
+     * @return Contract
+     */
+    public function setPrio($prio)
+    {
+        $this->prio = $prio;
+
+        return $this;
+    }
+
+    /**
+     * Get prio
+     *
+     * @return integer
+     */
+    public function getPrio()
+    {
+        return $this->prio;
+    }
+
+    /**
+     * Set idApplication
+     *
+     * @param \AppBundle\Entity\Application $idApplication
+     *
+     * @return Contract
+     */
+    public function setIdApplication(\AppBundle\Entity\Application $idApplication = null)
+    {
+        $this->idApplication = $idApplication;
+
+        return $this;
+    }
+
+    /**
+     * Get idApplication
+     *
+     * @return \AppBundle\Entity\Application
+     */
+    public function getIdApplication()
+    {
+        return $this->idApplication;
+    }
 
 
 }

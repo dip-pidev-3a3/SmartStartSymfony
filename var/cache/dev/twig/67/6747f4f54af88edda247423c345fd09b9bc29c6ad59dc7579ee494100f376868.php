@@ -1265,6 +1265,6 @@ class __TwigTemplate_aae5b07fb65b7605e1327054da3ccd64e273893ded5b36003827ecf9c7f
         </div>
     </section>
 {% endblock %}
-", "@Opportunity/Default/index.html.twig", "C:\\wamp64\\www\\smartstart\\src\\OpportunityBundle\\Resources\\views\\Default\\index.html.twig");
+", "@Opportunity/Default/index.html.twig", "C:\\wamp\\www\\SmartStartSymfony\\src\\OpportunityBundle\\Resources\\views\\Default\\index.html.twig");
     }
 }

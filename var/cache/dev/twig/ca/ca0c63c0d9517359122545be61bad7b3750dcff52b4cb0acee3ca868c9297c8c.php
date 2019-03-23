@@ -59,6 +59,6 @@ class __TwigTemplate_ff6f4b9e456e2322f4ad87dda29164f3a5a2e217bb08bf862d5f4e8b744
     public function getSourceContext()
     {
         return new Twig_Source("{{ include('@Twig/Exception/error.xml.twig') }}
-", "@Twig/Exception/error.rdf.twig", "C:\\wamp64\\www\\smartstart\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle\\Resources\\views\\Exception\\error.rdf.twig");
+", "@Twig/Exception/error.rdf.twig", "C:\\wamp\\www\\SmartStartSymfony\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\TwigBundle\\Resources\\views\\Exception\\error.rdf.twig");
     }
 }

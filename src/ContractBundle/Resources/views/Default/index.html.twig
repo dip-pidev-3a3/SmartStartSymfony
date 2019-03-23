@@ -22,8 +22,8 @@
 
 
     <div class="container">
-
-        <div class="modal-dialog modal-lg" role="document">
+    {% for i in con %}
+        <div class="modal-dialog modal-lg" role="document" style="display: inline-block">
             <div class="modal-content">
                 <div class="modal-body">
                     <div class="row">
@@ -37,18 +37,6 @@
                                              alt="First slide">
                                     </div>
                                 </div>
-                                <!--/.Slides-->
-                                <!--Controls-->
-                                <a class="carousel-control-prev" href="#carousel-thumb" role="button" data-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="false"></span>
-                                    <span class="sr-only">Previous</span>
-                                </a>
-                                <a class="carousel-control-next" href="#carousel-thumb" role="button" data-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="false"></span>
-                                    <span class="sr-only">Next</span>
-                                </a>
-                                <!--/.Controls-->
-
                             </div>
                             <!--/.Carousel Wrapper-->
                         </div>
@@ -58,7 +46,7 @@
                             </h2>
                             <h4 class="h4-responsive">
               <span class="green-text">
-                <strong>$49</strong>
+                <strong>${{ i.sum }}</strong>
               </span>
                             </h4>
 
@@ -80,7 +68,7 @@
                                 <div id="collapseOne1" class="collapse show" role="tabpanel" aria-labelledby="headingOne1"
                                      data-parent="#accordionEx">
                                     <div class="card-body">
-                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                                        {{ i.idApplication.idApplication }}
                                     </div>
                                 </div>
 
@@ -103,36 +91,36 @@
                                     <div id="collapseTwo2" class="collapse" role="tabpanel" aria-labelledby="headingTwo2"
                                          data-parent="#accordionEx">
                                         <div class="card-body">
-                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                                            {{ i.startDate|date }}
                                         </div>
                                     </div>
 
                                 </div>
                                 <!-- Accordion card -->
 
-                                <!-- Accordion card -->
-                                <div class="card">
+                            <!-- Accordion card -->
+                            <div class="card">
 
-                                    <!-- Card header -->
-                                    <div class="card-header" role="tab" id="headingTwo2">
-                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseTwo2"
-                                           aria-expanded="false" aria-controls="collapseTwo2">
-                                            <h5 class="mb-0">
-                                                Finish Date <i class="fas fa-angle-down rotate-icon"></i>
-                                            </h5>
-                                        </a>
-                                    </div>
-
-                                    <!-- Card body -->
-                                    <div id="collapseTwo2" class="collapse" role="tabpanel" aria-labelledby="headingTwo2"
-                                         data-parent="#accordionEx">
-                                        <div class="card-body">
-                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
-                                        </div>
-                                    </div>
-
+                                <!-- Card header -->
+                                <div class="card-header" role="tab" id="headingFour4">
+                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseFour4"
+                                       aria-expanded="false" aria-controls="collapseFour4">
+                                        <h5 class="mb-0">
+                                            Finish Date <i class="fas fa-angle-down rotate-icon"></i>
+                                        </h5>
+                                    </a>
                                 </div>
-                                <!-- Accordion card -->
+
+                                <!-- Card body -->
+                                <div id="collapseFour4" class="collapse" role="tabpanel" aria-labelledby="headingFour4"
+                                     data-parent="#accordionEx">
+                                    <div class="card-body">
+                                        {{ i.finishDate|date }}
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- Accordion card -->
 
                                 <!-- Accordion card -->
                                 <div class="card">
@@ -151,7 +139,7 @@
                                     <div id="collapseThree3" class="collapse" role="tabpanel" aria-labelledby="headingThree3"
                                          data-parent="#accordionEx">
                                         <div class="card-body">
-                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                                            {{ i.paymentMethod }}
                                         </div>
                                     </div>
 
@@ -172,6 +160,7 @@
                         </div>
                     </div>
                 </div>
+    {% endfor %}
             </div>
         </div>
 

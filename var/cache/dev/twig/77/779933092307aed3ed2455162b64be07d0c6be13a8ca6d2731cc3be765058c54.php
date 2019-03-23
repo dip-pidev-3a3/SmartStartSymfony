@@ -905,6 +905,6 @@ class __TwigTemplate_ee9c0c555d6564cec83b4cc8b3be429e92ea08cd3352d8a57163ce94e90
     {% if form is not rootform %}</span>{% else %}</div>{% endif %}
     {%- endif %}
 {%- endblock form_errors %}
-", "bootstrap_3_layout.html.twig", "C:\\wamp64\\www\\smartstart\\vendor\\symfony\\symfony\\src\\Symfony\\Bridge\\Twig\\Resources\\views\\Form\\bootstrap_3_layout.html.twig");
+", "bootstrap_3_layout.html.twig", "C:\\wamp\\www\\SmartStartSymfony\\vendor\\symfony\\symfony\\src\\Symfony\\Bridge\\Twig\\Resources\\views\\Form\\bootstrap_3_layout.html.twig");
     }
 }

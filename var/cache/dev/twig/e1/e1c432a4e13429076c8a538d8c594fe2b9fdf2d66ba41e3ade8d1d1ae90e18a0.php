@@ -460,6 +460,6 @@ class __TwigTemplate_c19d2c2e7b5363966cf5a7394f3e83ffd649b1eb59e3fef7bbfc3ef865f
         </div>
     {% endfor %}
 {% endblock %}
-", "@WebProfiler/Collector/validator.html.twig", "C:\\wamp\\www\\SmartStartSymfony-master\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Collector\\validator.html.twig");
+", "@WebProfiler/Collector/validator.html.twig", "C:\\wamp\\www\\SmartStartSymfony\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle\\Resources\\views\\Collector\\validator.html.twig");
     }
 }

@@ -390,6 +390,6 @@ class __TwigTemplate_fa9f830c1ca8742d07970b9ab10ee371fceaef61cb201533a15768ce30b
         );
     })();
 /*]]>*/</script>
-", "WebProfilerBundle:Profiler:toolbar_js.html.twig", "C:\\wamp64\\www\\smartstart\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle/Resources/views/Profiler/toolbar_js.html.twig");
+", "WebProfilerBundle:Profiler:toolbar_js.html.twig", "C:\\wamp\\www\\SmartStartSymfony\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle/Resources/views/Profiler/toolbar_js.html.twig");
     }
 }

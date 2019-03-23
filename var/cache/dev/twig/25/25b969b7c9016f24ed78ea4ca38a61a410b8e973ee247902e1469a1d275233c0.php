@@ -1669,6 +1669,6 @@ class __TwigTemplate_72b5d05ba449264630b4576c80edc1c6cf2744148c9d4294b4ff1a20861
         </tbody>
     </table>
 {% endmacro %}
-", "DoctrineBundle:Collector:db.html.twig", "C:\\wamp64\\www\\smartstart\\vendor\\doctrine\\doctrine-bundle/Resources/views/Collector/db.html.twig");
+", "DoctrineBundle:Collector:db.html.twig", "C:\\wamp\\www\\SmartStartSymfony\\vendor\\doctrine\\doctrine-bundle/Resources/views/Collector/db.html.twig");
     }
 }

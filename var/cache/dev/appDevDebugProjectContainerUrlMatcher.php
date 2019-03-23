@@ -107,12 +107,45 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
-        // admin_homepage
-        if ('/Admin/Home' === $pathinfo) {
-            return array (  '_controller' => 'AdminBundle\\Controller\\DefaultController::indexAction',  '_route' => 'admin_homepage',);
+        elseif (0 === strpos($pathinfo, '/Admin')) {
+            // admin_homepage
+            if ('/Admin/Home' === $pathinfo) {
+                return array (  '_controller' => 'AdminBundle\\Controller\\DefaultController::indexAction',  '_route' => 'admin_homepage',);
+            }
+
+            // admin_listPosts
+            if ('/Admin/Posts' === $pathinfo) {
+                return array (  '_controller' => 'AdminBundle\\Controller\\PostController::ListpostsAction',  '_route' => 'admin_listPosts',);
+            }
+
+            // Admin_deletePost
+            if (0 === strpos($pathinfo, '/Admin/deletepost') && preg_match('#^/Admin/deletepost/(?P<postId>[^/]++)$#sD', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, ['_route' => 'Admin_deletePost']), array (  '_controller' => 'AdminBundle\\Controller\\PostController::DeleteAction',));
+            }
+
+            // Admin_deleteComment
+            if (0 === strpos($pathinfo, '/Admin/deletecomment') && preg_match('#^/Admin/deletecomment/(?P<commentId>[^/]++)$#sD', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, ['_route' => 'Admin_deleteComment']), array (  '_controller' => 'AdminBundle\\Controller\\CommentController::DeleteAction',));
+            }
+
+            // Admin_UpdatePost
+            if (0 === strpos($pathinfo, '/Admin/UpdatePost') && preg_match('#^/Admin/UpdatePost/(?P<postId>[^/]++)$#sD', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, ['_route' => 'Admin_UpdatePost']), array (  '_controller' => 'AdminBundle\\Controller\\PostController::UpdateAction',));
+            }
+
+            // Admin_DetailPost
+            if (0 === strpos($pathinfo, '/Admin/DetailPost') && preg_match('#^/Admin/DetailPost/(?P<postId>[^/]++)$#sD', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, ['_route' => 'Admin_DetailPost']), array (  '_controller' => 'AdminBundle\\Controller\\PostController::DetailPostAction',));
+            }
+
+            // admin_listComments
+            if ('/Admin/Comments' === $pathinfo) {
+                return array (  '_controller' => 'AdminBundle\\Controller\\CommentController::ListCommentsAction',  '_route' => 'admin_listComments',);
+            }
+
         }
 
-        if (0 === strpos($pathinfo, '/blog')) {
+        elseif (0 === strpos($pathinfo, '/blog')) {
             // blog_homepage
             if ('/blog' === $trimmedPathinfo) {
                 $ret = array (  '_controller' => 'BlogBundle\\Controller\\DefaultController::indexAction',  '_route' => 'blog_homepage',);
@@ -166,6 +199,11 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 return $this->mergeDefaults(array_replace($matches, ['_route' => 'blog_Detail']), array (  '_controller' => 'BlogBundle\\Controller\\BlogPostsController::DetailPostAction',));
             }
 
+            // blog_Managment
+            if ('/blog/BlogManager' === $pathinfo) {
+                return array (  '_controller' => 'BlogBundle\\Controller\\BlogPostsController::ManagerAction',  '_route' => 'blog_Managment',);
+            }
+
             // blog_Like
             if (0 === strpos($pathinfo, '/blog/Like') && preg_match('#^/blog/Like/(?P<postId>[^/]++)/(?P<id>[^/]++)$#sD', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, ['_route' => 'blog_Like']), array (  '_controller' => 'BlogBundle\\Controller\\BlogPostsController::LikeAction',));
@@ -174,6 +212,11 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             // Update_BlogPost
             if (0 === strpos($pathinfo, '/blog/UpdatePost') && preg_match('#^/blog/UpdatePost/(?P<postId>[^/]++)$#sD', $pathinfo, $matches)) {
                 return $this->mergeDefaults(array_replace($matches, ['_route' => 'Update_BlogPost']), array (  '_controller' => 'BlogBundle\\Controller\\BlogPostsController::UpdateAction',));
+            }
+
+            // Blog_PostCat
+            if (0 === strpos($pathinfo, '/blog/PostCat') && preg_match('#^/blog/PostCat/(?P<cat>[^/]++)$#sD', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, ['_route' => 'Blog_PostCat']), array (  '_controller' => 'BlogBundle\\Controller\\BlogPostsController::PostsByCatAction',));
             }
 
         }
@@ -400,6 +443,11 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             }
             not_fos_user_resetting_check_email:
 
+        }
+
+        // my_contracts
+        if ('/contract/myContracts' === $pathinfo) {
+            return array (  '_controller' => 'ContractBundle\\Controller\\DefaultController::indexAction',  '_route' => 'my_contracts',);
         }
 
         if ('/' === $pathinfo && !$allow) {
