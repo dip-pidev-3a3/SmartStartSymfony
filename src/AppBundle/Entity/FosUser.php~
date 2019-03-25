@@ -1,0 +1,211 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * FosUser
+ *
+ * @ORM\Table(name="fos_user", uniqueConstraints={@ORM\UniqueConstraint(name="UNIQ_957A647992FC23A8", columns={"username_canonical"}), @ORM\UniqueConstraint(name="UNIQ_957A6479A0D96FBF", columns={"email_canonical"}), @ORM\UniqueConstraint(name="UNIQ_957A6479C05FB297", columns={"confirmation_token"})}, indexes={@ORM\Index(name="id", columns={"id"})})
+ * @ORM\Entity
+ */
+class FosUser
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="username", type="string", length=180, nullable=false)
+     */
+    private $username;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="username_canonical", type="string", length=180, nullable=false)
+     */
+    private $usernameCanonical;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="email", type="string", length=180, nullable=false)
+     */
+    private $email;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="email_canonical", type="string", length=180, nullable=false)
+     */
+    private $emailCanonical;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="enabled", type="boolean", nullable=false)
+     */
+    private $enabled;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="salt", type="string", length=255, nullable=true)
+     */
+    private $salt;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="password", type="string", length=255, nullable=false)
+     */
+    private $password;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="last_login", type="datetime", nullable=true)
+     */
+    private $lastLogin;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="confirmation_token", type="string", length=180, nullable=true)
+     */
+    private $confirmationToken;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="password_requested_at", type="datetime", nullable=true)
+     */
+    private $passwordRequestedAt;
+
+    /**
+     * @var array
+     *
+     * @ORM\Column(name="roles", type="array", nullable=false)
+     */
+    private $roles;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="name", type="string", length=50, nullable=true)
+     */
+    private $name;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="last_name", type="string", length=50, nullable=true)
+     */
+    private $lastName;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="Birth_date", type="date", nullable=true)
+     */
+    private $birthDate;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Bio", type="string", length=50, nullable=true)
+     */
+    private $bio;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="location", type="string", length=50, nullable=true)
+     */
+    private $location;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="Register_Date", type="date", nullable=true)
+     */
+    private $registerDate;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="Earnings", type="float", precision=10, scale=0, nullable=true)
+     */
+    private $earnings;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="Expenses", type="float", precision=10, scale=0, nullable=true)
+     */
+    private $expenses;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="Budget", type="float", precision=10, scale=0, nullable=true)
+     */
+    private $budget;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="field_company", type="string", length=30, nullable=true)
+     */
+    private $fieldCompany;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\ManyToMany(targetEntity="Skills", inversedBy="idFreelancer")
+     * @ORM\JoinTable(name="has_skill",
+     *   joinColumns={
+     *     @ORM\JoinColumn(name="id_freelancer", referencedColumnName="id")
+     *   },
+     *   inverseJoinColumns={
+     *     @ORM\JoinColumn(name="id_skill", referencedColumnName="id_skill")
+     *   }
+     * )
+     */
+    private $idSkill;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\ManyToMany(targetEntity="Opportunity", inversedBy="freelancerid")
+     * @ORM\JoinTable(name="suggestedopps",
+     *   joinColumns={
+     *     @ORM\JoinColumn(name="freelancerId", referencedColumnName="id")
+     *   },
+     *   inverseJoinColumns={
+     *     @ORM\JoinColumn(name="opportunityId", referencedColumnName="id_opp")
+     *   }
+     * )
+     */
+    private $opportunityid;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->idSkill = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->opportunityid = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+}
+
