@@ -99,7 +99,7 @@ class __TwigTemplate_abf69a2ccf5777153c1ab21e530cdba61f35ec3f1fc2e2f5d68f97feb13
         foreach ($context['_seq'] as $context["_key"] => $context["i"]) {
             // line 26
             echo "
-            <div class=\"modal-dialog modal-lg\" role=\"document\" style=\"display: inline-block\">
+            <div class=\"modal-dialog modal-lg\" role=\"document\" style=\"display: inline-block\" style=\"width: 100%\">
                 <div class=\"modal-content\">
                     <div class=\"modal-body\">
                         <div class=\"row\">
@@ -294,7 +294,6 @@ class __TwigTemplate_abf69a2ccf5777153c1ab21e530cdba61f35ec3f1fc2e2f5d68f97feb13
                                         <span><strong>Print</strong></span>
                                     </a>
                                 </div>
-
                             </div>
                             <!-- Accordion wrapper -->
                             <!-- Add to Cart -->
@@ -309,7 +308,7 @@ class __TwigTemplate_abf69a2ccf5777153c1ab21e530cdba61f35ec3f1fc2e2f5d68f97feb13
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['i'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 174
+        // line 173
         echo "    </div>
 
 
@@ -338,7 +337,7 @@ class __TwigTemplate_abf69a2ccf5777153c1ab21e530cdba61f35ec3f1fc2e2f5d68f97feb13
 
     public function getDebugInfo()
     {
-        return array (  313 => 174,  283 => 150,  273 => 143,  267 => 140,  256 => 132,  252 => 131,  237 => 119,  231 => 116,  220 => 108,  216 => 107,  201 => 95,  195 => 92,  184 => 84,  180 => 83,  166 => 72,  160 => 69,  149 => 61,  145 => 60,  132 => 50,  123 => 46,  101 => 26,  97 => 25,  85 => 16,  78 => 12,  68 => 4,  59 => 3,  41 => 2,  11 => 1,);
+        return array (  312 => 173,  283 => 150,  273 => 143,  267 => 140,  256 => 132,  252 => 131,  237 => 119,  231 => 116,  220 => 108,  216 => 107,  201 => 95,  195 => 92,  184 => 84,  180 => 83,  166 => 72,  160 => 69,  149 => 61,  145 => 60,  132 => 50,  123 => 46,  101 => 26,  97 => 25,  85 => 16,  78 => 12,  68 => 4,  59 => 3,  41 => 2,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -377,7 +376,7 @@ class __TwigTemplate_abf69a2ccf5777153c1ab21e530cdba61f35ec3f1fc2e2f5d68f97feb13
     <div class=\"container\">
         {% for i in con %}
 
-            <div class=\"modal-dialog modal-lg\" role=\"document\" style=\"display: inline-block\">
+            <div class=\"modal-dialog modal-lg\" role=\"document\" style=\"display: inline-block\" style=\"width: 100%\">
                 <div class=\"modal-content\">
                     <div class=\"modal-body\">
                         <div class=\"row\">
@@ -513,7 +512,6 @@ class __TwigTemplate_abf69a2ccf5777153c1ab21e530cdba61f35ec3f1fc2e2f5d68f97feb13
                                         <span><strong>Print</strong></span>
                                     </a>
                                 </div>
-
                             </div>
                             <!-- Accordion wrapper -->
                             <!-- Add to Cart -->

@@ -461,6 +461,16 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 return $this->mergeDefaults(array_replace($matches, ['_route' => 'delete_contract']), array (  '_controller' => 'ContractBundle\\Controller\\DefaultController::deleteAction',));
             }
 
+            // update_contract
+            if (0 === strpos($pathinfo, '/contract/contract/update') && preg_match('#^/contract/contract/update/(?P<id>[^/]++)$#sD', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, ['_route' => 'update_contract']), array (  '_controller' => 'ContractBundle\\Controller\\DefaultController::updateAction',));
+            }
+
+            // freelancer_contracts
+            if ('/contract/freelancerContracts' === $pathinfo) {
+                return array (  '_controller' => 'ContractBundle\\Controller\\DefaultController::freelancerContractsAction',  '_route' => 'freelancer_contracts',);
+            }
+
         }
 
         elseif (0 === strpos($pathinfo, '/notifications')) {

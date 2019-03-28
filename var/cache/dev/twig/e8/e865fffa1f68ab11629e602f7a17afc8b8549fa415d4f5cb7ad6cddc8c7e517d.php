@@ -127,89 +127,92 @@ class __TwigTemplate_e0f9ee1bd7e49bf2e0b2c1149655b279a102aeaafab8ad646bd237ac946
                     </div>
                 </div>
             </div>
+            <!-- Add Modal HTML -->
+            <div id=\"updateContract\" class=\"modal fade\">
+                <div class=\"modal-dialog\">
+                    <div class=\"modal-content\">
+                        <form name=\"addForm\" id=\"addForm\" method=\"post\" action=\"";
+            // line 48
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("update_contract", ["id" => $this->getAttribute($context["i"], "idContract", [])]), "html", null, true);
+            echo "\">
+                            <div class=\"modal-header\">
+                                <h4 class=\"modal-title\">Complete Your Contract...
+                                    <br/>
+                                    <small style=\"color: red\">pls notice that all fields are required *</small>
+                                </h4>
+                                <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>
+                            </div>
+
+                            <div class=\"modal-body\">
+                                <div class=\"form-group\">
+                                    <label>Job Title</label>
+                                    <input type=\"text\" id=\"idApplication\" name=\"idApplication\" class=\"form-control\" disabled=\"true\" value=\"";
+            // line 60
+            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($this->getAttribute($context["i"], "idApplication", []), "idOpportunity", []), "jobTitle", []), "html", null, true);
+            echo "\">
+
+                                </div>
+                                <div class=\"form-group\">
+                                    <label>Freelancer Name</label>
+                                    <input type=\"text\" id=\"freelancer\" name=\"freelancer\" class=\"form-control\" disabled=\"true\" value=\"";
+            // line 65
+            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($this->getAttribute($context["i"], "idApplication", []), "idFreelancer", []), "name", []), "html", null, true);
+            echo " ";
+            echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($this->getAttribute($context["i"], "idApplication", []), "idFreelancer", []), "lastName", []), "html", null, true);
+            echo "\">
+
+                                </div>
+                                <div class=\"form-group\">
+                                    <label>Start Date</label>
+                                    <input type=\"date\" id=\"start\" name=\"start\" class=\"form-control\" onblur=\"validStart()\">
+                                    <label name=\"err1\" id=\"err1\" hidden><small style=\"color: red\">Pls notice that the Start Date can't be in the past or more than the Finish Date</small></label>
+
+                                </div>
+                                <div class=\"form-group\">
+                                    <label>Finish Date</label>
+                                    <input type=\"date\" id=\"finish\" name=\"finish\" class=\"form-control\" onblur=\"validFinish()\">
+                                    <label><small name=\"err2\" id=\"err2\" hidden style=\"color: red\">Pls notice that the Finish Date must be after the Start Date</small></label>
+
+                                </div>
+                                <div class=\"form-group\">
+                                    <label>Sum</label>
+                                    <input type=\"number\" id=\"sum\" name=\"sum\" min=\"100\" class=\"form-control\" onblur=\"validSum()\" placeholder=\"Type The Sum Here\">
+                                    <label name=\"err3\" id=\"err3\" hidden><small style=\"color: red\">Pls notice that the sum field is required and can't be null or negative</small></label>
+
+                                </div>
+                                <div class=\"form-group\">
+                                    <label>Payment Method</label>
+                                    <select id=\"paymentMethod\" name=\"paymentMethod\" class=\"form-control\">
+                                        <option value=\"En Ligne\">En Ligne</option>
+                                        <option value=\"Cash\">Cash</option>
+                                        <option value=\"Cheque\">Cheque</option>
+                                    </select>
+
+                                </div>
+                            </div>
+                            <div class=\"modal-footer\">
+                                <input type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\" value=\"Cancel\">
+                                <input type=\"submit\" id=\"valider\" name=\"valider\" class=\"btn btn-success\" id=\"addb\" value=\"Add\" disabled>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['i'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 45
+        // line 105
         echo "    </div>
-
-    <!-- Add Modal HTML -->
-    <div id=\"updateContract\" class=\"modal fade\">
-        <div class=\"modal-dialog\">
-            <div class=\"modal-content\">
-                ";
-        // line 51
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock(($context["form"] ?? $this->getContext($context, "form")), 'form_start');
-        echo "
-                <div class=\"modal-header\">
-                    <h4 class=\"modal-title\">Complete Your Contract...</h4>
-                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>
-                </div>
-                <div class=\"modal-body\">
-                    <div class=\"form-group\" style=\"visibility: hidden\">
-                        <label>Job Title</label>
-                        ";
-        // line 59
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "idApplication", []), 'widget', ["attr" => ["class" => "form-control", "disabled" => "true", "type" => "text"]]);
-        echo "
-
-                    </div>
-
-                    <div class=\"form-group\">
-                        <label>Start Date</label>
-                        ";
-        // line 65
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "startDate", []), 'widget', ["attr" => ["class" => "input", "type" => "date"]]);
-        echo "
-
-                    </div>
-                    <div class=\"form-group\">
-                        <label>Finish Date</label>
-                        ";
-        // line 70
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "finishDate", []), 'widget', ["attr" => ["class" => "input", "type" => "date"]]);
-        echo "
-
-                    </div>
-                    <div class=\"form-group\">
-                        <label>Sum</label>
-                        ";
-        // line 75
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "sum", []), 'widget', ["attr" => ["class" => "field-style field-full", "type" => "text"]]);
-        echo "
-
-                    </div>
-                    <div class=\"form-group\">
-                        <label>Payment Method</label>
-                        ";
-        // line 80
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "paymentMethod", []), 'widget', ["attr" => ["class" => "custom-select sources", "type" => "select", "name" => "sources", "id" => "sources"]]);
-        echo "
-
-
-                    </div>
-                    <div class=\"form-group\" style=\"visibility: hidden\">
-                        <label>Prio</label>
-                        ";
-        // line 86
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock($this->getAttribute(($context["form"] ?? $this->getContext($context, "form")), "prio", []), 'widget', ["attr" => ["class" => "form-control", "style" => "font-size: 12px", "type" => "text", "value" => "1"]]);
-        echo "
-
-                    </div>
-                </div>
-                <div class=\"modal-footer\">
-                    <input type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\" value=\"Cancel\">
-                    <input type=\"submit\" onclick=\"myFunction()\" id=\"form\" name=\"form\" class=\"btn btn-success\" id=\"addb\" value=\"Add\">
-                </div>
-                ";
-        // line 94
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock(($context["form"] ?? $this->getContext($context, "form")), 'form_end');
-        echo "
-            </div>
-        </div>
-    </div>
+    <script src=\"";
+        // line 106
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/js/jquery-3.3.1.js"), "html", null, true);
+        echo "\"></script>
+    <script src=\"";
+        // line 107
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("assets/js/contract.js"), "html", null, true);
+        echo "\"></script>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -231,7 +234,7 @@ class __TwigTemplate_e0f9ee1bd7e49bf2e0b2c1149655b279a102aeaafab8ad646bd237ac946
 
     public function getDebugInfo()
     {
-        return array (  208 => 94,  197 => 86,  188 => 80,  180 => 75,  172 => 70,  164 => 65,  155 => 59,  144 => 51,  136 => 45,  119 => 34,  115 => 33,  108 => 31,  101 => 26,  97 => 25,  85 => 16,  78 => 12,  68 => 4,  59 => 3,  41 => 2,  11 => 1,);
+        return array (  214 => 107,  210 => 106,  207 => 105,  159 => 65,  151 => 60,  136 => 48,  119 => 34,  115 => 33,  108 => 31,  101 => 26,  97 => 25,  85 => 16,  78 => 12,  68 => 4,  59 => 3,  41 => 2,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -287,60 +290,70 @@ class __TwigTemplate_e0f9ee1bd7e49bf2e0b2c1149655b279a102aeaafab8ad646bd237ac946
                     </div>
                 </div>
             </div>
+            <!-- Add Modal HTML -->
+            <div id=\"updateContract\" class=\"modal fade\">
+                <div class=\"modal-dialog\">
+                    <div class=\"modal-content\">
+                        <form name=\"addForm\" id=\"addForm\" method=\"post\" action=\"{{ path('update_contract',{'id':i.idContract}) }}\">
+                            <div class=\"modal-header\">
+                                <h4 class=\"modal-title\">Complete Your Contract...
+                                    <br/>
+                                    <small style=\"color: red\">pls notice that all fields are required *</small>
+                                </h4>
+                                <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>
+                            </div>
+
+                            <div class=\"modal-body\">
+                                <div class=\"form-group\">
+                                    <label>Job Title</label>
+                                    <input type=\"text\" id=\"idApplication\" name=\"idApplication\" class=\"form-control\" disabled=\"true\" value=\"{{ i.idApplication.idOpportunity.jobTitle }}\">
+
+                                </div>
+                                <div class=\"form-group\">
+                                    <label>Freelancer Name</label>
+                                    <input type=\"text\" id=\"freelancer\" name=\"freelancer\" class=\"form-control\" disabled=\"true\" value=\"{{ i.idApplication.idFreelancer.name }} {{ i.idApplication.idFreelancer.lastName }}\">
+
+                                </div>
+                                <div class=\"form-group\">
+                                    <label>Start Date</label>
+                                    <input type=\"date\" id=\"start\" name=\"start\" class=\"form-control\" onblur=\"validStart()\">
+                                    <label name=\"err1\" id=\"err1\" hidden><small style=\"color: red\">Pls notice that the Start Date can't be in the past or more than the Finish Date</small></label>
+
+                                </div>
+                                <div class=\"form-group\">
+                                    <label>Finish Date</label>
+                                    <input type=\"date\" id=\"finish\" name=\"finish\" class=\"form-control\" onblur=\"validFinish()\">
+                                    <label><small name=\"err2\" id=\"err2\" hidden style=\"color: red\">Pls notice that the Finish Date must be after the Start Date</small></label>
+
+                                </div>
+                                <div class=\"form-group\">
+                                    <label>Sum</label>
+                                    <input type=\"number\" id=\"sum\" name=\"sum\" min=\"100\" class=\"form-control\" onblur=\"validSum()\" placeholder=\"Type The Sum Here\">
+                                    <label name=\"err3\" id=\"err3\" hidden><small style=\"color: red\">Pls notice that the sum field is required and can't be null or negative</small></label>
+
+                                </div>
+                                <div class=\"form-group\">
+                                    <label>Payment Method</label>
+                                    <select id=\"paymentMethod\" name=\"paymentMethod\" class=\"form-control\">
+                                        <option value=\"En Ligne\">En Ligne</option>
+                                        <option value=\"Cash\">Cash</option>
+                                        <option value=\"Cheque\">Cheque</option>
+                                    </select>
+
+                                </div>
+                            </div>
+                            <div class=\"modal-footer\">
+                                <input type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\" value=\"Cancel\">
+                                <input type=\"submit\" id=\"valider\" name=\"valider\" class=\"btn btn-success\" id=\"addb\" value=\"Add\" disabled>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         {% endfor %}
     </div>
-
-    <!-- Add Modal HTML -->
-    <div id=\"updateContract\" class=\"modal fade\">
-        <div class=\"modal-dialog\">
-            <div class=\"modal-content\">
-                {{ form_start(form) }}
-                <div class=\"modal-header\">
-                    <h4 class=\"modal-title\">Complete Your Contract...</h4>
-                    <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>
-                </div>
-                <div class=\"modal-body\">
-                    <div class=\"form-group\" style=\"visibility: hidden\">
-                        <label>Job Title</label>
-                        {{ form_widget(form.idApplication, { 'attr': {'class': 'form-control', 'disabled':'true', 'type':'text'} }) }}
-
-                    </div>
-
-                    <div class=\"form-group\">
-                        <label>Start Date</label>
-                        {{ form_widget(form.startDate, { 'attr': {'class':'input', 'type' : 'date'} }) }}
-
-                    </div>
-                    <div class=\"form-group\">
-                        <label>Finish Date</label>
-                        {{ form_widget(form.finishDate, { 'attr': {'class':'input', 'type' : 'date'} }) }}
-
-                    </div>
-                    <div class=\"form-group\">
-                        <label>Sum</label>
-                        {{ form_widget(form.sum, { 'attr': {'class': 'field-style field-full', 'type' : 'text'} }) }}
-
-                    </div>
-                    <div class=\"form-group\">
-                        <label>Payment Method</label>
-                        {{ form_widget(form.paymentMethod, { 'attr': {'class': 'custom-select sources', 'type' : 'select','name' : 'sources', 'id' : 'sources'} }) }}
-
-
-                    </div>
-                    <div class=\"form-group\" style=\"visibility: hidden\">
-                        <label>Prio</label>
-                        {{ form_widget(form.prio, { 'attr': {'class': 'form-control', 'style':'font-size: 12px', 'type':'text', 'value':'1'} }) }}
-
-                    </div>
-                </div>
-                <div class=\"modal-footer\">
-                    <input type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\" value=\"Cancel\">
-                    <input type=\"submit\" onclick=\"myFunction()\" id=\"form\" name=\"form\" class=\"btn btn-success\" id=\"addb\" value=\"Add\">
-                </div>
-                {{ form_end(form) }}
-            </div>
-        </div>
-    </div>
+    <script src=\"{{ asset('assets/js/jquery-3.3.1.js') }}\"></script>
+    <script src=\"{{ asset('assets/js/contract.js') }}\"></script>
 {% endblock %}", "@Contract/Default/lowContracts.html.twig", "C:\\wamp\\www\\SmartStartSymfony-push\\src\\ContractBundle\\Resources\\views\\Default\\lowContracts.html.twig");
     }
 }
